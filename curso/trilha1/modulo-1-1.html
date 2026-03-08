@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo 1.1 | Engenharia Agentic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563', 500: '#6b7280' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🤖</span>
+            <span class="font-bold text-lg hidden sm:inline">Engenharia Agentic</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos Agentic</span>
+          </a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Construcao e Operacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Mercado e Produtos</span>
+          </a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm4 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-.464 4.95.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414ZM17 11h-1a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2ZM4 10a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm.636 4.95a1 1 0 0 1 0 1.414l-.707.707A1 1 0 0 1 2.515 15.657l.707-.707a1 1 0 0 1 1.414 0ZM10 16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM5.05 4.636a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 4.343 2.515l.707.707a1 1 0 0 1 0 1.414ZM14.95 4.636a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0Z"/></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 0 1 6.707 2.707a8.001 8.001 0 1 0 10.586 10.586Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="text-sm text-neutral-400 mb-6">
+      <a href="../../index.html" class="hover:text-neutral-200">Inicio</a>
+      <span class="mx-2">/</span>
+      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
+      <span class="mx-2">/</span>
+      <span class="text-emerald-400">Modulo 1.1</span>
+    </div>
+
+    <header class="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-8 sm:p-10 mb-12">
+      <div class="inline-flex items-center rounded-full bg-emerald-500/20 text-emerald-400 px-4 py-1.5 text-sm font-semibold mb-4">MODULO 1.1</div>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">🧭 O que e Agentic AI e como pensar como engenheiro</h1>
+      <p class="text-lg text-neutral-300 max-w-3xl mb-8">Este modulo abre o curso pela perspectiva correta: engenharia de execucao. O foco nao e impressionar com demos, mas definir objetivos, decompor problemas e criar criterios de qualidade observaveis.</p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">6</div><div class="text-sm text-neutral-400">Topicos</div></div>
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">35</div><div class="text-sm text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">Base</div><div class="text-sm text-neutral-400">Nivel</div></div>
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">Lab</div><div class="text-sm text-neutral-400">Tipo</div></div>
+      </div>
+    </header>
+
+    <section id="topico-1" class="mb-16">
+      <div class="flex items-start gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-lg font-bold flex items-center justify-center flex-shrink-0">1</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">🔍 Chatbot, automacao e agentic</h2>
+          <p class="text-neutral-300">Agentic nao substitui tudo. A primeira habilidade do engenheiro e reconhecer quando um problema pede resposta, quando pede fluxo fixo e quando pede decisao orientada a objetivo.</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-5">
+          <h3 class="text-xl font-bold mb-2">Conceito principal</h3>
+          <p class="text-neutral-300">Chatbot responde. Automacao executa passos fixos. Agentic decide entre passos possiveis dentro de um escopo definido e com ferramentas autorizadas.</p>
+        </div>
+        <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Dado importante</h3>
+          <p class="text-neutral-300">Quanto maior o risco da decisao e mais alto o custo do erro, menor deve ser a autonomia livre do agente.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+            <h3 class="text-lg font-semibold mb-2">Fazer</h3>
+            <p class="text-neutral-300">Escolher agentic quando ha incerteza controlada, necessidade de ferramentas e etapas que exigem adaptacao.</p>
+          </div>
+          <div class="rounded-2xl border border-red-500/30 bg-red-500/10 p-5">
+            <h3 class="text-lg font-semibold mb-2">Evitar</h3>
+            <p class="text-neutral-300">Forcar agentic em fluxo simples, altamente previsivel ou regulado, onde automacao fixa resolve melhor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="topico-2" class="mb-16">
+      <div class="flex items-start gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-lg font-bold flex items-center justify-center flex-shrink-0">2</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">🎯 Objetivo, contexto e restricao</h2>
+          <p class="text-neutral-300">Toda especificacao forte responde tres perguntas: qual trabalho precisa ser feito, com quais insumos e quais limites o sistema deve respeitar.</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-5">
+          <h3 class="text-xl font-bold mb-2">Conceito principal</h3>
+          <p class="text-neutral-300">Objetivo sem restricao gera improviso. Restricao sem contexto gera rigidez. Engenharia agentic trabalha com o equilibrio entre os dois.</p>
+        </div>
+        <div class="rounded-2xl border border-primary/40 bg-primary/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Dica pratica</h3>
+          <p class="text-neutral-300">Ao descrever um workflow, sempre declare input minimo, output esperado, fontes permitidas e o que o agente nao pode fazer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="topico-3" class="mb-16">
+      <div class="flex items-start gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-lg font-bold flex items-center justify-center flex-shrink-0">3</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">📏 Criterios de sucesso e falha</h2>
+          <p class="text-neutral-300">Um engenheiro de agentic nao avalia “parece bom”. Ele define como medir completude, corretude, formato, seguranca e rastreabilidade.</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Pesquisa e pratica</h3>
+          <p class="text-neutral-300">Os guias oficiais de agents e evals apontam o mesmo padrao: sem criterios claros, nao existe melhoria continua de verdade.</p>
+        </div>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <h3 class="text-lg font-semibold mb-2">Checklist minimo</h3>
+          <p class="text-neutral-300">A saida esta completa? O formato e valido? A resposta usou fontes permitidas? Existe acao de risco sem aprovacao? O trace explica a decisao?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="topico-4" class="mb-16">
+      <div class="flex items-start gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-lg font-bold flex items-center justify-center flex-shrink-0">4</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">🧩 Decomposicao de tarefas</h2>
+          <p class="text-neutral-300">Quebrar um objetivo em etapas validaveis diminui ambiguidade, melhora debug e facilita troca de componentes sem colapsar o sistema inteiro.</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-5">
+          <h3 class="text-xl font-bold mb-2">Conceito principal</h3>
+          <p class="text-neutral-300">Uma boa decomposicao cria fases com entrada, saida e criterio local de validacao. Nao e so “quebrar em passos”, e criar pontos de controle.</p>
+        </div>
+        <div class="rounded-2xl border border-red-500/30 bg-red-500/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Alerta</h3>
+          <p class="text-neutral-300">Prompt grande e monolitico costuma esconder falhas. Quando algo da errado, fica dificil saber se foi contexto, ferramenta, raciocinio ou formato.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="topico-5" class="mb-16">
+      <div class="flex items-start gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-lg font-bold flex items-center justify-center flex-shrink-0">5</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">⚖️ Fluxo fixo vs decisao do agente</h2>
+          <p class="text-neutral-300">O design maduro usa o agente onde ele agrega julgamento e usa fluxo deterministico onde previsibilidade, custo e seguranca sao mais importantes.</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Bom uso de decisao agentica</h3>
+          <p class="text-neutral-300">Escolha de fonte, planejamento de subtarefas, classificacao contextual e adaptacao controlada.</p>
+        </div>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <h3 class="text-lg font-semibold mb-2">Bom uso de fluxo fixo</h3>
+          <p class="text-neutral-300">Persistir dados, enviar notificacao, chamar endpoint definido, validar esquema e executar operacao destrutiva somente com aprovacao.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="topico-6" class="mb-16">
+      <div class="flex items-start gap-4 mb-6">
+        <span class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 text-lg font-bold flex items-center justify-center flex-shrink-0">6</span>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">🧪 Laboratorio de especificacao</h2>
+          <p class="text-neutral-300">Fechamento do modulo com um artefato simples e exigente: escrever a especificacao de um workflow agentic com input, output, restricao e criterio de sucesso.</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-primary/40 bg-primary/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Exercicio</h3>
+          <p class="text-neutral-300">Escolha um processo manual real, descreva o objetivo, liste as tools necessarias, aponte riscos e defina 5 criterios objetivos de aceite.</p>
+        </div>
+        <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-5">
+          <h3 class="text-lg font-semibold mb-2">Entregavel</h3>
+          <p class="text-neutral-300">Documento de spec operacional com entradas, saidas, restricoes, etapas e checkpoints de validacao.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-8">
+      <h2 class="text-2xl font-bold mb-4">✅ Resumo final</h2>
+      <div class="space-y-3 text-neutral-300 mb-8">
+        <p>✓ Diferenciou chatbot, automacao e agentic por criterio operacional.</p>
+        <p>✓ Aprendeu a especificar objetivo, contexto e restricao.</p>
+        <p>✓ Entendeu que qualidade precisa de criterios objetivos.</p>
+        <p>✓ Viu como decompor tarefas e distribuir autonomia.</p>
+        <p>✓ Saiu com o primeiro artefato de engenharia do curso.</p>
+      </div>
+      <div class="flex justify-start space-x-3">
+        <a href="index.html" class="px-5 py-3 rounded-xl bg-dark-700 border border-dark-600 text-neutral-200 font-semibold hover:bg-dark-600 transition-colors">Voltar para Trilha</a>
+        <a href="index.html" class="px-5 py-3 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold hover:bg-emerald-500/30 transition-colors">Proximo Modulo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>Engenharia Agentic - 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

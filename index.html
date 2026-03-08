@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engenharia Agentic | INEMA.CLUB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563', 500: '#6b7280' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🤖</span>
+            <span class="font-bold text-lg hidden sm:inline">Engenharia Agentic</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="curso/trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Construcao</span>
+          </a>
+          <a href="curso/trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Mercado</span>
+          </a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm4 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-.464 4.95.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414ZM17 11h-1a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2ZM4 10a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm.636 4.95a1 1 0 0 1 0 1.414l-.707.707A1 1 0 0 1 2.515 15.657l.707-.707a1 1 0 0 1 1.414 0ZM10 16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM5.05 4.636a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 4.343 2.515l.707.707a1 1 0 0 1 0 1.414ZM14.95 4.636a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0Z"/></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 0 1 6.707 2.707a8.001 8.001 0 1 0 10.586 10.586Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="rounded-3xl border border-dark-600 bg-gradient-to-br from-dark-800 via-dark-800 to-dark-900 p-8 sm:p-12">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center rounded-full bg-primary/10 text-primary px-4 py-1.5 text-sm font-semibold mb-6">CURSO COMPLETO</div>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6">Engenharia Agentic em 3 trilhas para formar talento de execucao.</h1>
+        <p class="text-lg text-neutral-300 mb-6">Este curso foi desenhado para sair de conteudo conceitual e formar gente que especifica workflows, desenha tools, roda evals, depura traces e opera sistemas agentic em ambiente real.</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">3</div><div class="text-sm text-neutral-400">Trilhas</div></div>
+          <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">18</div><div class="text-sm text-neutral-400">Modulos</div></div>
+          <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">100+</div><div class="text-sm text-neutral-400">Aulas e labs</div></div>
+          <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">Projeto</div><div class="text-sm text-neutral-400">Capstone</div></div>
+        </div>
+        <div class="flex justify-start space-x-3">
+          <a href="curso/trilha1/index.html" class="px-5 py-3 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold hover:bg-emerald-500/30 transition-colors">Explorar Trilha 1</a>
+          <a href="doc/grade_final_curso_agentic.md" class="px-5 py-3 rounded-xl bg-dark-700 border border-dark-600 text-neutral-200 font-semibold hover:bg-dark-600 transition-colors">Ver grade final</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <div class="flex items-end justify-between mb-6">
+        <div>
+          <p class="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">Arquitetura do curso</p>
+          <h2 class="text-2xl font-bold">As 3 trilhas do programa</h2>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="curso/trilha1/index.html" class="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-6 hover:border-emerald-400 transition-colors">
+          <div class="inline-flex rounded-full bg-emerald-500/20 text-emerald-400 px-3 py-1 text-sm font-semibold mb-4">TRILHA 1</div>
+          <h3 class="text-2xl font-bold mb-3">🌱 Fundamentos Agentic</h3>
+          <p class="text-neutral-300 mb-4">Base conceitual, fundamentos tecnicos, WAT, design de tools e primeiro mini projeto.</p>
+          <ul class="space-y-2 text-sm text-neutral-400">
+            <li>6 modulos</li>
+            <li>Especificacao de workflows</li>
+            <li>Primeiro projeto guiado</li>
+          </ul>
+        </a>
+        <a href="curso/trilha2/index.html" class="rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-900/30 to-dark-800 p-6 hover:border-blue-400 transition-colors">
+          <div class="inline-flex rounded-full bg-blue-500/20 text-blue-400 px-3 py-1 text-sm font-semibold mb-4">TRILHA 2</div>
+          <h3 class="text-2xl font-bold mb-3">🛠️ Construcao e Operacao</h3>
+          <p class="text-neutral-300 mb-4">Arquitetura, integracoes, MCP, evals, seguranca, deploy e operacao observavel.</p>
+          <ul class="space-y-2 text-sm text-neutral-400">
+            <li>8 modulos</li>
+            <li>Laboratorios de engenharia</li>
+            <li>Projeto principal</li>
+          </ul>
+        </a>
+        <a href="curso/trilha3/index.html" class="rounded-3xl border border-purple-500/30 bg-gradient-to-br from-purple-900/30 to-dark-800 p-6 hover:border-purple-400 transition-colors">
+          <div class="inline-flex rounded-full bg-purple-500/20 text-purple-400 px-3 py-1 text-sm font-semibold mb-4">TRILHA 3</div>
+          <h3 class="text-2xl font-bold mb-3">📈 Mercado e Produtos</h3>
+          <p class="text-neutral-300 mb-4">Discovery, casos de uso, ROI, precificacao, entrega e portfolio consultivo.</p>
+          <ul class="space-y-2 text-sm text-neutral-400">
+            <li>7 modulos</li>
+            <li>Capstone de negocio</li>
+            <li>Oferta e posicionamento</li>
+          </ul>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-14 grid lg:grid-cols-[1.3fr_0.7fr] gap-6">
+      <div class="rounded-3xl bg-dark-800 border border-dark-600 p-8">
+        <p class="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">Formacao alvo</p>
+        <h2 class="text-2xl font-bold mb-4">Talentos que o curso pretende desenvolver</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-neutral-300">
+          <div class="rounded-2xl bg-dark-700 border border-dark-600 p-4">Definir objetivo operacional com criterios claros de sucesso e falha.</div>
+          <div class="rounded-2xl bg-dark-700 border border-dark-600 p-4">Desenhar tools com schema, escopo e aprovacao humana quando necessario.</div>
+          <div class="rounded-2xl bg-dark-700 border border-dark-600 p-4">Separar corretamente fluxo deterministico de etapas agenticas.</div>
+          <div class="rounded-2xl bg-dark-700 border border-dark-600 p-4">Criar evals, ler traces e depurar regressao sem quebrar o que ja funciona.</div>
+          <div class="rounded-2xl bg-dark-700 border border-dark-600 p-4">Lidar com seguranca, injection, dados nao confiaveis e operacoes destrutivas.</div>
+          <div class="rounded-2xl bg-dark-700 border border-dark-600 p-4">Operar workflows em producao com logs, custos e observabilidade.</div>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-dark-800 border border-dark-600 p-8">
+        <p class="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">Projetos ancora</p>
+        <h2 class="text-2xl font-bold mb-4">Progressao pratica</h2>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-dark-600 p-4">
+            <div class="text-emerald-400 font-semibold mb-1">1. Assistente de pesquisa e sintese</div>
+            <p class="text-sm text-neutral-400">Projeto inicial para especificacao, tools e saida estruturada.</p>
+          </div>
+          <div class="rounded-2xl border border-dark-600 p-4">
+            <div class="text-blue-400 font-semibold mb-1">2. Workflow agentic operavel</div>
+            <p class="text-sm text-neutral-400">Integracoes reais, evals, logs, seguranca e deploy.</p>
+          </div>
+          <div class="rounded-2xl border border-dark-600 p-4">
+            <div class="text-purple-400 font-semibold mb-1">3. Capstone consultivo</div>
+            <p class="text-sm text-neutral-400">Diagnostico de gargalo, proposta tecnica e ROI para empresa real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>Engenharia Agentic - 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

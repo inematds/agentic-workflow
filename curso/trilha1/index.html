@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha 1 | Engenharia Agentic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563', 500: '#6b7280' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🤖</span>
+            <span class="font-bold text-lg hidden sm:inline">Engenharia Agentic</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos Agentic</span>
+          </a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Construcao e Operacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Mercado e Produtos</span>
+          </a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm4 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-.464 4.95.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414ZM17 11h-1a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2ZM4 10a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm.636 4.95a1 1 0 0 1 0 1.414l-.707.707A1 1 0 0 1 2.515 15.657l.707-.707a1 1 0 0 1 1.414 0ZM10 16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM5.05 4.636a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 4.343 2.515l.707.707a1 1 0 0 1 0 1.414ZM14.95 4.636a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0Z"/></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 0 1 6.707 2.707a8.001 8.001 0 1 0 10.586 10.586Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-8 sm:p-10">
+      <div class="inline-flex items-center rounded-full bg-emerald-500/20 text-emerald-400 px-4 py-1.5 text-sm font-semibold mb-5">TRILHA 1</div>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">🌱 Fundamentos Agentic</h1>
+      <p class="text-lg text-neutral-300 mb-8 max-w-3xl">A trilha de entrada forma a base de raciocinio do engenheiro de agentic: objetivo, contexto, restricao, WAT, design de tools, memoria e primeiro mini projeto com entregavel observavel.</p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">6</div><div class="text-sm text-neutral-400">Modulos</div></div>
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">36</div><div class="text-sm text-neutral-400">Aulas</div></div>
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">6</div><div class="text-sm text-neutral-400">Laboratorios</div></div>
+        <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">Base</div><div class="text-sm text-neutral-400">Nivel</div></div>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold mb-6">Visao rapida dos modulos</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="modulo-1-1.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors">
+          <div class="text-emerald-400 font-semibold mb-2">1.1</div>
+          <h3 class="text-2xl font-bold mb-2">🧭 O que e Agentic AI e como pensar como engenheiro</h3>
+          <p class="text-neutral-400">Objetivo, contexto, restricao, criterio de sucesso e decomposicao de workflow.</p>
+        </a>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <div class="text-emerald-400 font-semibold mb-2">1.2</div>
+          <h3 class="text-2xl font-bold mb-2">🔌 Fundamentos tecnicos para workflows</h3>
+          <p class="text-neutral-400">API, JSON, webhooks, auth, `.env` e contratos de integracao.</p>
+        </div>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <div class="text-emerald-400 font-semibold mb-2">1.3</div>
+          <h3 class="text-2xl font-bold mb-2">🧱 WAT na pratica</h3>
+          <p class="text-neutral-400">Separacao entre workflow, agent e tools, com fronteiras claras.</p>
+        </div>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <div class="text-emerald-400 font-semibold mb-2">1.4</div>
+          <h3 class="text-2xl font-bold mb-2">🧰 Tool design e schemas</h3>
+          <p class="text-neutral-400">Descricao de tools, contratos, validacao e aprovacao humana.</p>
+        </div>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <div class="text-emerald-400 font-semibold mb-2">1.5</div>
+          <h3 class="text-2xl font-bold mb-2">🧠 Contexto, memoria e reutilizacao</h3>
+          <p class="text-neutral-400">Contexto de sessao, memoria persistente, skills e configuracao.</p>
+        </div>
+        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
+          <div class="text-emerald-400 font-semibold mb-2">1.6</div>
+          <h3 class="text-2xl font-bold mb-2">🚀 Primeiro mini projeto agentic</h3>
+          <p class="text-neutral-400">Pesquisa, sintese, validacao e entrega estruturada.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 class="text-2xl font-bold mb-6">Modulos detalhados</h2>
+      <div class="space-y-6">
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
+          <div class="p-6 border-b border-dark-600">
+            <div class="flex items-center justify-between gap-4 flex-wrap">
+              <div>
+                <div class="text-emerald-400 font-semibold mb-1">Modulo 1.1 • ~35 min</div>
+                <h3 class="text-2xl font-bold mb-2">🧭 O que e Agentic AI e como pensar como engenheiro</h3>
+                <p class="text-neutral-400">Modulo de abertura que muda o foco de hype para execucao: definir problema, medir qualidade e decompor trabalho.</p>
+              </div>
+              <div class="flex justify-start space-x-3">
+                <a href="modulo-1-1.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a>
+                <button onclick="openModal('modal-1-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+              </div>
+            </div>
+          </div>
+          <div class="divide-y divide-dark-600">
+            <div class="topic-item">
+              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span>
+                <div><div class="font-semibold">🔍 Chatbot, automacao e agentic</div><div class="text-sm text-neutral-400">Onde cada abordagem funciona e onde falha</div></div>
+              </button>
+              <div class="topic-explanation px-6 pb-5">
+                <div class="grid gap-4">
+                  <div><strong>O que e:</strong> comparacao operacional entre resposta pontual, fluxo fixo e execucao orientada a objetivo.</div>
+                  <div><strong>Por que aprender:</strong> evita vender ou construir agentic para problemas que pedem apenas automacao deterministica.</div>
+                  <div><strong>Conceitos-chave:</strong> objetivo, autonomia limitada, escopo, decisao e previsibilidade.</div>
+                </div>
+              </div>
+            </div>
+            <div class="topic-item">
+              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span>
+                <div><div class="font-semibold">🎯 Objetivo, contexto e restricao</div><div class="text-sm text-neutral-400">A base da especificacao de qualquer workflow</div></div>
+              </button>
+              <div class="topic-explanation px-6 pb-5">
+                <div><strong>O que e:</strong> definicao do trabalho a ser feito, das informacoes disponiveis e dos limites de execucao.</div>
+                <div><strong>Por que aprender:</strong> sem isso o agente improvisa demais e a qualidade cai rapidamente.</div>
+                <div><strong>Conceitos-chave:</strong> input, output, restricoes, fontes confiaveis e criterios de aceite.</div>
+              </div>
+            </div>
+            <div class="topic-item">
+              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span>
+                <div><div class="font-semibold">📏 Criterios de sucesso e falha</div><div class="text-sm text-neutral-400">Como parar de avaliar “no feeling”</div></div>
+              </button>
+              <div class="topic-explanation px-6 pb-5">
+                <div><strong>O que e:</strong> definicao objetiva do que significa saida correta, incompleta ou perigosa.</div>
+                <div><strong>Por que aprender:</strong> sem criterio objetivo nao existe eval, regressao nem melhoria consistente.</div>
+                <div><strong>Conceitos-chave:</strong> completeness, correctness, safety, traceability e formato de saida.</div>
+              </div>
+            </div>
+            <div class="topic-item">
+              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span>
+                <div><div class="font-semibold">🧩 Decomposicao de tarefas</div><div class="text-sm text-neutral-400">Quebrar problemas em etapas testaveis</div></div>
+              </button>
+              <div class="topic-explanation px-6 pb-5">
+                <div><strong>O que e:</strong> separacao de um objetivo maior em subetapas menores, mais verificaveis e mais seguras.</div>
+                <div><strong>Por que aprender:</strong> workflows bons nascem de decomposicao boa, nao de prompts maiores.</div>
+                <div><strong>Conceitos-chave:</strong> fases, dependencias, checkpoints, handoff e validacao parcial.</div>
+              </div>
+            </div>
+            <div class="topic-item">
+              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span>
+                <div><div class="font-semibold">⚖️ Fluxo fixo vs decisao do agente</div><div class="text-sm text-neutral-400">Onde deixar liberdade e onde nao</div></div>
+              </button>
+              <div class="topic-explanation px-6 pb-5">
+                <div><strong>O que e:</strong> criterio de arquitetura para escolher o que e deterministico e o que pode ser agentico.</div>
+                <div><strong>Por que aprender:</strong> grande parte dos erros em agentic vem de autonomia mal distribuida.</div>
+                <div><strong>Conceitos-chave:</strong> previsibilidade, risco, custo, branching e guardrails.</div>
+              </div>
+            </div>
+            <div class="topic-item">
+              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span>
+                <div><div class="font-semibold">🧪 Laboratorio de especificacao</div><div class="text-sm text-neutral-400">Primeiro artefato de engenharia do curso</div></div>
+              </button>
+              <div class="topic-explanation px-6 pb-5">
+                <div><strong>O que e:</strong> exercicio para transformar uma necessidade de negocio em spec operacional de workflow.</div>
+                <div><strong>Por que aprender:</strong> e o primeiro filtro entre curiosidade sobre agentic e pratica de engenharia agentic.</div>
+                <div><strong>Conceitos-chave:</strong> spec, contrato, saida esperada, erro aceitavel e entregavel observavel.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
+          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.2 • ~40 min</div>
+          <h3 class="text-2xl font-bold mb-2">🔌 Fundamentos tecnicos para workflows</h3>
+          <p class="text-neutral-400">API, JSON, webhook, auth, `.env` e contratos de integracao para preparar as ferramentas do agente.</p>
+        </div>
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
+          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.3 • ~35 min</div>
+          <h3 class="text-2xl font-bold mb-2">🧱 WAT na pratica</h3>
+          <p class="text-neutral-400">Separar workflow, agent e tools para evitar bagunca de responsabilidade.</p>
+        </div>
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
+          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.4 • ~45 min</div>
+          <h3 class="text-2xl font-bold mb-2">🧰 Tool design e schemas</h3>
+          <p class="text-neutral-400">Descricao, contrato, tratamento de erro, validacao e aprovacoes humanas.</p>
+        </div>
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
+          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.5 • ~40 min</div>
+          <h3 class="text-2xl font-bold mb-2">🧠 Contexto, memoria e reutilizacao</h3>
+          <p class="text-neutral-400">Contexto de sessao, memoria persistente, skills e configuracoes reutilizaveis.</p>
+        </div>
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
+          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.6 • ~50 min</div>
+          <h3 class="text-2xl font-bold mb-2">🚀 Primeiro mini projeto agentic</h3>
+          <p class="text-neutral-400">Assistente de pesquisa e sintese com validacao de saida e entrega padronizada.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-1-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()">
+    <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+      <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
+        <div class="flex items-center space-x-3">
+          <span class="text-emerald-400 font-bold">1.1</span>
+          <span class="font-semibold">O que e Agentic AI e como pensar como engenheiro</span>
+        </div>
+        <button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button>
+      </div>
+      <iframe src="modulo-1-1.html" class="flex-1 w-full rounded-b-xl"></iframe>
+    </div>
+  </div>
+
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>Engenharia Agentic - 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTopic(button) {
+      const topicItem = button.closest('.topic-item');
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = button.closest('.bg-dark-800');
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => {
+        if (exp !== explanation) exp.classList.remove('active');
+      });
+      explanation.classList.toggle('active');
+    }
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeModal() {
+      document.querySelectorAll('.modal').forEach(modal => modal.classList.add('hidden'));
+      document.body.style.overflow = 'auto';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

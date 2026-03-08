@@ -1,0 +1,969 @@
+resuam todo os topicos
+
+(777) How to Build $10,000 Agentic Workflows (Claude Code Tutorial) - YouTube
+https://www.youtube.com/watch?v=vFepZE_wrfg
+
+Transcript:
+(00:00) Agentic workflows are not just a trend. They're the future of the AI industry. More and more companies are making the shift to agentic workflows. And this is just getting started because it's estimated that the AI agentic market is going from about $7 billion this year to around 93 billion in the next couple of years.
+(00:15) So I can tell you right now that knowing how to build aic workflows is going to be one of the most valuable skills that you can have. So in this video, I'm going to break down why you should be building aic workflows and then I'm going to actually build one live in front of you so you can see exactly how it works. And by the end, I'll show you how to actually sell these if you want to make some money with your skills. So, let's get into it.
+(00:31) So, before we build anything, I want to show you why this all matters. Because it's not just hype. This is real money moving into real technology. Right now, the agentic AI market is sitting at around $8 billion. By 2030, that's expected to hit 40 to 50 billion. That's not just a small jump.
+(00:45) That's an entire industry being built in front of our eyes. And it's not just projections. About 25% of enterprises are already deploying Aentic pilots this year. And by 2027, that number will jump to 50%. So half of major companies will be running some version of agentic workflows within the next two years. And with that comes massive budget allocations, new security requirements, and a ton of new opportunities for people who know how to build these systems.
+(01:05) So why is this happening now? What's driving the shift? It comes down to pretty much one thing, which is companies are starting to hit that ceiling of what traditional automation can do. And they're starting to realize they could move a lot faster with more agentic workflows. If you've been building workflows in tools like Eniden or Zapier, you know the drill.
+(01:18) You map out every step. You connect the different nodes or blocks. You handle the edge cases yourself and it works until it breaks because traditional workflows will break when they hit something unexpected. And when that happens, someone has to usually go in manually and fix that. And that's maintenance. That's time.
+(01:31) That's ultimately money. Now, I do want to be real with you here because there's a lot of noise online about a dentic workflows that makes it sound like they're just completely magic and they fix themselves forever. And that is partially true, but only in a specific context, at least right now.
+(01:43) Cuz when you're actively working in a tool like Cloud Code and you trigger a workflow yourself and say, "Hey, go research these competitors and build me a report." the agent is sitting right there with you. So if something breaks, the agent can catch it mid-run. It can adjust its approach. It can update its tools and keep going.
+(01:56) That self-healing piece is very, very real and it's incredibly powerful while you're building and while you're iterating. But once you deploy that workflow to run on its own on a schedule or triggered by a web hook or something like that, that is when you're deploying the code, you're deploying the tools, not the actual agent itself.
+(02:10) So if you've seen my previous videos where we've used the WAT framework, we are basically deploying the W workflows and the Tools, but not the A agent. But I'll cover this more in depth later during the live build if you're confused. But what this means is that the self-healing ability ultimately goes away when the code is up in the cloud, you know, running automatically.
+(02:28) And at that point, it does behave more like a traditional automation. But that's really a good thing because automations are predictable. They're deterministic. And those types are the best ones. So then where's the real advantage? Really, it sits in how you build. Traditional automation is like building a train track by hand.
+(02:42) You're laying every rail, every switch, every connection all by yourself. Whereas with Agentic workflows, it's like you're just telling a construction crew, "Hey, I need you to build a train track from here to there." And then they build it for you. Meaning, if they hit a problem during construction, they would figure it out. So, you end up with a better train track.
+(02:56) It's built faster with fewer mistakes because the agent handled the edge cases during the build process that you might have missed or not thought of. And then the idea is you battle test it before you ever actually deploy it. So then you have a lot of confidence that it will always work. So in our train analogy, before we deploy that train track, we would have like 10 different types of trains test drive on it.
+(03:12) It would be different weights, different lengths, and maybe different wheels. And we want to make sure that our track can work for all different types of trains before we deploy it. And the reason this is actually possible now is because the technology has finally caught up. LM have gotten really reliable enough to use in production.
+(03:26) And we're not just playing around with chatbots anymore. These models can reason. They can make decisions and they can execute multi-step tasks with real consistency. On top of that, we've got things to use like skills or MCP or ATA. We've also got infrastructure like trigger.dev, modal, or versel that make deployment way simpler than it used to be.
+(03:41) And most importantly, we've got tools like cloud code that make all of this accessible to non-developers. So, we can see that the market is absolutely shifting towards agentic systems, and the numbers back it up. But here's a question that's probably on your mind. Does this mean everything that I've learned about noden or traditional automation is useless? Not even close. And let me explain why.
+(03:57) The people who are going to struggle with agentic workflows are the ones who completely skip those fundamentals and jump straight into cloud code, tell it to build something, and have no idea if what is being built is actually good. They probably don't know what a web hook is or how APIs work.
+(04:09) They won't be able to spot when the agent made a bad decision because they've never built the thing manually themselves. Now, that's not to say that a beginner can't learn cloud code. And because you actually understand how automations work under the hood, you can communicate precisely what you want much clearer. And you'll see once we hop into the live build just how important it is to actually be able to communicate really clearly.
+(04:26) All right, so now you understand why agentic workflows are such a big deal. Now I'm going to show you how simple it is to build an agentic workflow using cloud code. And by the way, if you want to follow along with what I'm about to build, you can grab all the resources and files that you need completely for free in my free school community.
+(04:39) The link for that is down in the description. All right, so we're now in Visual Studio Code, which is where we're going to actually use Cloud Code. Visual Studio Code is just an IDE or an integrated development environment, and that's where, like I said, we're going to be using Cloud Code. So, if you don't have this up and running yet, all you have to do is go to a browser and type in Visual Studio Code and download the right one for your operating system.
+(04:58) And then, once you open that up, it should look like this. The first thing you have to do is install the cloud code extension. So you're going to go over here to the lefth hand side. You're going to open up extensions and then you will see right here cloud code or if you don't, you will search cloud code. And once you pull that open, it'll ask you to install it.
+(05:12) And then once you do, it'll basically just prompt you to sign in with your Cloud subscription. Now, you do have to be on a paid plan for Claude in order to access Claude Code. As you can see on the free version, you don't get Cloud Code, but right here on the paid version, you do. So you can start off with the pro plan at 17 bucks a month.
+(05:28) And then if you need to, if you keep hitting limits, you can upgrade to max, which honestly you probably will. I'm on the max plan and it is an amazing return on my investment. So I would just go with the max. But anyways, you'll get authenticated and then it will bring you back here. And now we can actually get going using cloud code and building workflows.
+(05:42) So I'm going to close out of this screen. And what we're going to do now is we're going to open up a project. So on this lefth hand side, I'm going to go up here to explore. And this says you have not yet opened a folder. Open a folder. So essentially when we're in cloud code, we're going to be working within a certain folder.
+(05:54) And that's kind of the way that I think of like this is the project that we're working on. So I'm going to click open folder and I'm going to open up a blank project. So you can see I'm in a folder called newsletters demo and there's nothing in it. It's completely fresh. I'm going to click select folder and now we can see we're in this project.
+(06:07) I'm real quick just going to close out of this and close out of this just so we have a really clean interface to look at with not much going on and I can explain what we're actually about to do. So to make this as simple as possible in cloud code we have an agent and we have files. That's it. The left hand side is where we see those files.
+(06:21) We'll see different workflows. We'll see tools. We'll see all these little things. And then on the right hand side we'll have the cloud code agent and that's where we talk to it, we plan with it, it asks us questions and it actually executes and writes the code or builds the workflow for us. So if I switch back into Visual Studio Code and I double click right here and then I open up this button that says Cloud Code.
+(06:38) This is where we actually open up the actual Cloud Code agent right there. So I'll close out of this. You can see this is kind of what we're talking about now. Files on this side. There's nothing there yet. And the Claude Code agent right here. Now what we have to do next is give Claude Code a claw.
+(06:50) md file which is basically just instructions for this specific project. And you can really just think of this as a system prompt. So that way when we the user send a message to our cloud code agent, it doesn't just process what we said and respond to us, but it also every time reads the cloud. MBD file. So this is where you're going to put important things like how the folders are laid out.
+(07:06) You know where to find your different files, what its end goal is, any frameworks that you might be using. So in this case, what we're going to be doing is we're going to be using a framework called WAT, which stands for workflows, agent, and tools. So, real quick, if you pop over to my free community and you go to the classroom and then you click on cloud code right here, you'll see the watclaw.
+(07:23) mmd and you can go ahead and download this file right here. And once you've downloaded that file, you can actually just drag it over here to the lefth hand side and it should pop up as claude.md. And if you wanted to, you could read through this entire basically system prompt to see what I'm telling it about how to build workflows, how to build tools, how to keep learning, and how to, you know, set up its its folders and everything.
+(07:40) But I'm not going to read that all out right now. What I'm going to do is just basically tell Cloud Code to set up the project. read the claw.md file and then set up the project and the structure and then we'll start building workflows together. So I'm basically just going to shoot that off and it's going to go ahead and read that and get everything ready.
+(07:55) So we'll see soon on the lefth hand side we've got all our different folders set up. But while it's going through and doing that let me just explain what these different things are. So agent that is the actual cloud code agent that we just talked to as you saw and the agent utilizes workflows and tools to help us automate things. So the first thing is workflows.
+(08:10) These are markdown files which you just saw similar to the cloud.MD and it looks like this. It's basically completely natural language. You could read through every line and understand exactly what's going on. It just uses things like pound signs and, you know, dashes and asterisks to separate like what's a header and what's bold to stress importance for the agent.
+(08:29) Workflows are natural language processes, instructions. So, right now, let's just use an analogy of a recipe. The workflow is the recipe. So, you'd have a workflow for how to bake a chocolate cake. And when you want to bake that chocolate cake, it's going to tell you what to do in certain order. So, it's going to say preheat the oven to this.
+(08:44) Boil some water. I don't know why you'd boil water for a cake. Crack two eggs in a bowl. You know, measure out a cup of flour, whatever it is. And those are the tools. So, the tools are all of the ingredients, but without the structure of the workflow, saying use tool one, then tool 5, then tool 7, then tool 10. Without the order and the structure, the tools are useless.
+(09:01) So, basically, the workflows tell the agent how to build the tools. And what's really cool about both of these is as they're being built and as they're being used, the agent will improve them over time if it makes mistakes or if it learns things. So that is why we use the WAT framework to build our workflows with cloud code.
+(09:14) So now that that's done, you can see that this is finished up and it's basically said, okay, the project is set up. Here's a summary of the structure. Here's what I understand. We're going to be building workflows in this project likely around newsletter operations. WAT framework. I will act as the agent.
+(09:26) I will read workflows. I will run tools. I will handle errors and improve the system. I've got Python ready to go. And I'm going to store secrets in the env. So this is where we're going to put our API keys rather than putting them straight into cloud so that they could be exposed who knows where. Okay. So, what I'm going to do is go ahead and do a /cle just to get rid of this conversation and we can start fresh.
+(09:44) And we're going to start to plan out this workflow that we want to build. Before we start planning, I'm going to switch this to plan mode. So, you can see we're in bypass permissions. You can go to ask before edits. You can go to edit automatically. But I want to go to plan mode. And it's really, really important, as we talked about earlier, to be able to communicate clearly what you want.
+(09:59) And the cool thing about cloud code is when we give it a plan, even if it's pretty ambiguous, it will come back and say, "Okay, in order for this to be good, I need to know x, y, and z." So, I'm going to give it a fairly ambiguous prompt here. And then you're going to see it ask us questions and plan out this workflow for us.
+(10:12) Hey Claude, I want to build a workflow which will basically be a newsletter automation. I want to be able to tell you that I need a newsletter about a certain topic and you will do research. You will structure it in HTML. You will make it look pretty and you will also create a few infographics to go with it. So help me figure out what text stack to use here and what else you might suggest that I haven't yet thought of.
+(10:32) So I'm going to shoot that off. Now, whether we're in plan mode or, you know, bypass permissions, what happens is the agent starts thinking and it starts testing things out. So, it's thinking, it's reading through files, it has this little thing that will say computing or deciphering or wobbling or whatever it is, just a bunch of little silly words, but that just basically shows you exactly what it's doing.
+(10:49) All right, so we just hit the point where it's asking us some questions before it continues working on the plan. The first thing is for research, do you want to add an external search API to pull in data? So, what I'm going to do is say, yeah, sure. Let's just go ahead and do perplexity. for delivery.
+(11:01) It asks us if we want to use Beehive or if we just want to send the HTML file for now. I'm actually just going to go ahead and say let's actually just send this over in Gmail. And now it asks us about brand assets, which is really cool. So, if we want to, we can send over some brand guidelines or logos and stuff like that to make sure that the newsletters are always formatted and they feel on brand.
+(11:19) So, I'm going to go ahead and say yes, I will provide some brand assets. So, then what happens is it comes back with a final plan. Let me just zoom out a little bit so we can actually see that a little bit better. We'll go ahead and see what it came up with. So, newsletter automation workflow. We want to conduct research, generate HTML with polished visual design, create infographics to accompany the content. Got a research layer.
+(11:37) We've got the content generation. We got the infographics. So, it says that it could use data stats infographics or it could use SVG. Why not image generation? It's too unpredictable. It can't embed. I'm actually going to go ahead and say that I wanted to use nanobanana. So, I'm going to go ahead and type in here.
+(11:52) For the infographics, I want you to generate AI images using nanobanana. You can use a platform called key.ai. So this just shows the importance of plan mode and reading through the plan so that you can make sure before it actually starts building everything you like what it's going to do. Okay.
+(12:06) So now that new plan has been done you can see the text stack is going to be research with perplexity. The content will be written with claude. The infographics will be created with nano banana. We will write the email in HTML and then send that via Gmail. And it even comes up with a section here about things the user likely hasn't considered.
+(12:22) So things like human review, subject line, metadata, brand consistency, all this type of stuff. Now, the last thing that I actually forgot to give it was my brand assets. So, what I'm going to do real quick before we accept or, you know, keep working on the plan, I'm going to create a new folder over here. I'm going to call this brand_assets.
+(12:36) And you can see I dragged in two things. I dragged in AIS PNG, which is our logo, and I dragged in our brand guidelines. So, I want the newsletter to be formatted in this way. So, I'm going to click on no key planning, and I'm going to tell Claude that it needs to use those two assets. So, what's cool is that I can actually directly tag them.
+(12:51) So, I'm saying make sure the whole newsletter is branded based on my logo and brand guidelines. So for logo, I'm going to do at and I'm going to type in AIS. And you can see that it's going to show AISPG. And then here I can do at AIS and I'm going to click on brand guidelines. So now it's going to look at those exact two things and it's going to be able to make sure that the newsletter is branded. Okay.
+(13:09) So this time the plan looks good to go. And I'm just going to go ahead and auto accept. And I'm going to turn on bypass permissions. So it's going to build everything out. It's going to put the different files that we need. And then we should be able to basically just add our API keys and then test it.
+(13:21) So what it's doing now is it creates a to-do list. So this is all of the things that it has to do. and as it actually completes them, it crosses them out. So, it's really cool because you can work on something else on a different screen and just kind of check in on cloud code to see where it's at and if it needs any help.
+(13:33) Now, you guys may be wondering about this bypass permissions mode. If you don't see this, you just have to go to your settings. In your settings, search for cloud code. And then right here, you'll be able to see allow dangerously skip permissions, which turns on allow bypass permissions mode. Okay, so that is finished up.
+(13:47) It's telling us here's what it built. So, it created two config files, which we can see right here. It's got newsletter style which basically just shows like the colors and the text and the background and it's got recipients which is where we need to add who this is actually being sent to. So this is where we would add a huge list of you know our email list basically.
+(14:03) Then it created 1 2 3 4 five different tools. If I open up those right here the tools are research, generate infographic, assemble HTML, send via Gmail and archive to sheets. And here is what all of those five tools do. And then of course we have the actual workflow right here which is our markdown file which basically shows step by step how to actually build the newsletter and what tools to use.
+(14:21) And this is the complete natural language just explaining the process. So now that those have all been created the last thing that we have to do before we actually test it out is we have to give it credentials. So anthropic perplexity key.ai and then our Gmail. So what I'd do is I go to Plexity grab my API key.
+(14:36) I would come into thev and then over here it's created these placeholders. That's all that I have to do is paste in my API key right there and then hit save to make sure that all this saves. So, I'm going to go ahead and do this now for my other API keys. Okay, so we've done everything that it told us to do.
+(14:47) We've set up all our credentials. At least I hope we have. If we run into any errors, Cloud Code should fix it or tell us what to do. What I'm going to do now is just kick off a prompt. Write me a newsletter about Aentic AI. So, I literally just said, write me a newsletter about Aentic AI. And that's it.
+(15:02) What it's doing now is it's looking through the relevant workflows and tools, and it's going to figure out what to do. Here you can see it said I found the newsletter workflow starting with step one I'm going to do some research. You can see after that it's going to plan and generate the infographics. It's going to write the newsletter content and then we actually have a human review point.
+(15:16) So it's going to get subject line approval and then if it's approved it'll go ahead and send the newsletter. So now your job at this point is just to watch it and to make sure it's doing everything right and if it runs into issues it should fix itself. But sometimes it may need you to help steer it in the right direction.
+(15:28) The first test run is the only one where it's really like this because you have to see how it works. But then after that, you should be able to just trust that it's going to run pretty much perfectly every time. Here you can see we've already run into our first issue. There was a unic code encoding issue, but it's just going to go ahead and fix it.
+(15:41) And that's great because I don't really know what this means at all. So I'm glad that it understands what to do. Nice. So you can see it planned out three infographics. It's got a market growth. It's got Gartner road map. And it's got impact metrics. So here's a good example. It was trying to generate those infographics using key.
+(15:55) AI, and it was getting an error. So what it did is it looked into the problem. It said, "Let me investigate to find the correct endpoint." It did some web searching. It looked through the docs. It did multiple searches as you can see. And it figured out that the endpoints have changed. And now it's able to switch the tool so that it works this time. There we go.
+(16:09) So, it said, "I found the fix. Here's the right endpoint. Let me update the tool so that this doesn't happen again." And now it just went ahead and fixed the tool. All right. At this point, it did a human review step. And we could obviously say we don't want this if we don't want it. But for now, let's just go ahead and see what it wants.
+(16:23) It wants us to approve a subject line. It asks us to choose which one. I'll go ahead and send five. And then we will see the final output. Okay. So, a few things happen. And I'm actually glad they did so I can show you how you need to troubleshoot this. So the first thing is we got the email but the HTML is all messed up. It came through with a background color but then all of this just is horrible.
+(16:39) So we're going to have it fix this. The second thing is I gave it the wrong Google sheet ID to archive to sheets because there was some sort of access issue. So I'm going to go ahead and fix that sheet ID and I'm just going to use my natural language to tell it that this is horrible. I've updated the sheet ID. However, the actual email that I received is completely awful.
+(16:56) I can't read any of it. It doesn't even make any sense. take a look at figure out what happened and try to send me it again. So, it's going to go ahead and diagnose what happened and then hopefully send us a better version. So, once again, it found the issue, it found out exactly how to fix it, and now it's updating the workflow in the tool so it doesn't happen again.
+(17:11) Now, of course, cloud code's not perfect. You guys can see that in this demo, but think about if you were doing this in something else like ended or something that's a bit more manual and you were running into these issues and you'd have to go back and fix all of the logic yourself and try to debug all this. I've literally just been telling it to fix it and then like doing other work or going in the other room and waiting for it to figure it out on its own.
+(17:28) Okay, now it fixed everything. And if I go over to my email, we see this newsletter. What happens when AI stops waiting for instructions? We can see that we've got our logo up top. We've got AIS intelligence brief. It does think that it's June 2026, which is wrong, but we could obviously fix that very easily. But now we move into the actual newsletter.
+(17:43) And keep in mind, this started with one prompt that said, "Write me a newsletter about Aenticai." That was it. Also, throughout the newsletter, pay attention to the fact that it's using our fonts. It's using our brand guidelines, our colors, all of that in this newsletter. So, the first section is about the market landscape, an explosion that cannot be ignored.
+(17:57) I'm not going to go ahead and read all of this text. It would just take too long. A nano banana AI generated image with text with graphics. And this infographic is also adhering to our brand guidelines. In section two, we have architecture. We've got a little bit of a quote here. And if we keep scrolling down, we've got some more statistics.
+(18:11) We've got section three. We've got another quote. And we have another infographic. Once again, adhering to our brand guidelines and using a little logo up here as well. And that's pretty much how the rest of the newsletter goes. We've got section four. And we can see our third and final infographic that has a different version of the AIS logo as well as our brand guidelines.
+(18:28) So this was literally iteration one. There's a lot of things that we can improve here. And all we would do is we'd open up Cloud Code and we'd ask it to make it better using natural language. We could actually make sure that every infographic it creates uses our actual logo rather than prompting some sort of AIS logo in there.
+(18:42) It ends with some key takeaways and then we have it ends with some key takeaways. We have a call to action down here and then all of the sources we could actually click on and it would take us to that actual site where it pulled the data from. So that was version one of the newsletter and I think that that's pretty solid.
+(18:56) Now the cool thing about these projects in cloud code is as you use them more they get better and better because every time I run this workflow it might find something else out and it will update its cloud MD. It'll update its workflows. It'll update its tools as I give it more brand asset as I give it more context and more knowledge.
+(19:09) It just gets better and better. And then once you really trust the actual workflows and tools, that's when you go ahead and you come back into this. And then once you really trust the workflows and the tools that you've created using cloud code, you would basically take these two things and you would push those into like a GitHub repository and you'd sync those to something like trigger.
+(19:25) dev or modal in order to actually have them run every single Monday at 6 a.m. or daily, something like that. I'm not going to dive into that in this video, but if you want to see one where I did, then I'll tag one right up here. So, what you guys just saw here was me using hardly any prompting, just using my natural language, giving it a few logos and colors, and then giving us a really, really good output for a newsletter.
+(19:43) Now, one thing that we didn't cover in this video, but we will be covering a lot more in the future is how you could actually make your workflows even better and better. And that's the idea of using skills. Whether it is a skill that you create yourself or whether it's a skill that someone else has already built.
+(19:55) So, skills are basically just system prompts that you could load in when you need them. So, let's say you ask Cloud for help. Hey, can you design me a website? The agent will then check through all of the skills it has access to and it will see based on all of these skills, does my current request require this.
+(20:09) So, it's almost like the same way it decides if it should use a tool or not. So, for example, there is a front-end design skill that makes Cloud Code so much better at designing websites. And so, if I'm ever building a project where I need it to be able to build websites, I would tell it to always invoke the front-end design skill.
+(20:23) And the reason I'm bringing this up is because you can create your own. So, what I might do in this version is once I realize what I really like about how it creates newsletters, I will tell it to turn that into a skill. So maybe it is the skill of making infographics look really really polished with the AIS logo in the top left corner and I could create that skill so that every time it needs to create a new infographic it reads that first and then it makes its outputs a lot more consistent.
+(20:44) So I know that this seems a little bit intimidating at first but hopefully you guys realize after watching this how easy it was for me to actually do this once again with hardly any technical knowledge. We didn't set up any API calls. We didn't do anything like that. We just talked to it. But now the question is how do you actually turn a skill like this into income? So this is something that I see all the time.
+(21:00) a business owner watches your YouTube videos or LinkedIn posts or whatever it is and sees flashy AI demo. Maybe that's a voice agent or a really cool chatbot or a crazy looking dashboard and they come to you or some sort of like, you know, AI agency and they say, "I want that." But when you actually sit down and you look at their business and their operations, that's not what they need at all.
+(21:17) The real problem is that leads might be falling through the cracks or the onboarding is taking way too long or there's tons of manual data entry going on. Just think about it like plumbing. If you have a pipe that's clogged, it doesn't matter how much water you pour into it, it's not going to flow any faster if there's a clog. Most businesses are out here trying to put as much water into the pipe as possible, hiring more people, throwing AI at random problems, but what they actually need is someone who can come in, find the clog, and then clear that, and then
+(21:38) start to add more water in. That's really the skill. And if you can cut through the noise and identify real constraints and unclog that pipe, that's worth way more than building some super flashy agent that looks cool, but doesn't actually move the needle. The build itself is also not what businesses are paying for because building is getting easier and easier every day, which is good news, but it also kind of brings about some panic because more people can spin up these automations much quicker and that's becoming a
+(22:00) little bit more commoditized. So, if you're trying to compete on I can build AI automations, you're going to be in a race to the bottom. What you need to do is act as the doctor, not the pharmacist. I've used this analogy a lot on my channel. A pharmacist just fills a prescription that someone else wrote, but a doctor sits down with the patient, asks questions, runs diagnostics, and figures out what's actually wrong before anything is then prescribed.
+(22:20) That's the difference between someone who just builds workflows, and someone that businesses will pay serious money to work with. So, when you're talking to a business owner, you're not leading with, I build agentic workflows in cloud code. They don't care about that. You're leading with I can save you x amount of time per month.
+(22:33) You're leading with I can save this process x percentage of errors. And that's exactly why you should not be pricing yourself hourly. Because if you can build something in 30 minutes, that ends up saving the business, let's just say 20 hours a week. That's not a 30-minute job. That's tens of thousands of dollars in value over the course of a year.
+(22:47) So, if you price yourself at an hourly rate, you're putting a ceiling on your income and you're completely ignoring the value that you're actually delivering. Now, hourly can be fine early on when you're just getting started and you're building trust and you need to get your first few wins.
+(22:59) But once you can clearly show the ROI, the hours saved, the cost eliminated, the revenue generated, all that kind of stuff, then your pricing should really be reflecting that value, not your time. Trading time for money is not very scalable. So here's a simple way to think about it. You sit down with a client and you figure out their processes and you calculate that this system is going to save them $10,000 a month.
+(23:16) Now, let's say you charge $5,000 for that build. That should be a no-brainer for them. They make their money back in two weeks, and then everything else is just profit for the business. And it's also a great deal for you because that build might just have taken you a few days, maybe a few weeks. That is basically valuebased pricing. Everybody wins.
+(23:30) Now, in terms of actually finding clients, I've done a full deep dive on that in another video which I will go ahead and link right up here. But at a high level, the approach is simple. You don't need a huge audience. You don't need to start a full-blown agency. You just need to start conversations with the right people.
+(23:41) You need to be transparent about what you're building and lead with how you can help them. Once you deliver the solution, you stick around because once that first system is running and they see the results, they're going to want more. They're going to want you to optimize the build. They're going to want you to expand on it. They're going to want you to help find new opportunities inside their business.
+(23:54) That's how a $3,000 build turns into a $50,000 a year relationship. But the key there is that you have to be the one to track the metrics. You have to take ownership over that. You have to practively show them the value that the system is actually adding. That's super super important.
+(24:07) And that's exactly the path freelancer to consultant to trusted partner. You're not just building workflows. You're becoming the person businesses rely on to make their operations smarter. So we just went from understanding what's happening in the agentic workflow market to actually building one live and seeing how to sell these systems for premium prices.
+(24:21) Here's the thing though. This isn't just the future of automation. It's happening right now. Companies are already making the shift. And the demand for people who can build these systems is only going to grow. So, if you want to dive deeper into this kind of stuff, I've got a community with over a quarter million members where I share templates, resources, and all the files from videos just like this one.
+(24:37) And if you're serious about making money with AI automation, if you want access to live Q&A with me, if you want direct support, and even job opportunities, and you can check out my paid community, both of those links are in the description. But that's going to do it for this one. If you guys enjoyed, you learned something new, please give a like.
+(24:50) Definitely helps me out a ton. And as always, I appreciate you guys making it to the end of the video. I'll see you on the next one.
+
+
+
+## O que é Agentic AI (agentic workflows)
+
+Agentic AI é um tipo de sistema de IA que não apenas responde perguntas, mas executa tarefas completas de forma autônoma, seguindo objetivos e tomando decisões durante o processo.
+
+Em vez de só gerar texto, o agente pode:
+
+* pesquisar informações
+* usar ferramentas (APIs, banco de dados, email, etc.)
+* executar várias etapas de um processo
+* corrigir erros durante a execução
+* produzir um resultado final
+
+Ou seja, ele funciona mais como um assistente que realiza um trabalho inteiro, não apenas como um chatbot.
+
+---
+
+## Como ele se diferencia de outros modelos de IA
+
+### 1. Chatbot tradicional (ex: ChatGPT simples)
+
+O que faz:
+
+* responde perguntas
+* gera texto ou código
+* depende totalmente do usuário para cada passo
+
+Exemplo:
+Você pergunta:
+
+> escreva uma newsletter sobre IA
+
+Ele só gera o texto.
+
+---
+
+### 2. Automação tradicional
+
+O que faz:
+
+* segue um fluxo fixo
+* cada passo foi programado manualmente
+* quebra quando algo inesperado acontece
+
+Exemplo:
+
+1. pegar dados
+2. gerar texto
+3. enviar email
+
+Se algo mudar no meio do caminho, o fluxo falha.
+
+---
+
+### 3. Agentic AI
+
+O que faz:
+
+* recebe um objetivo
+* decide quais passos executar
+* usa ferramentas automaticamente
+* ajusta o plano se algo der errado
+
+Exemplo:
+Você diz:
+
+> crie uma newsletter sobre Agentic AI
+
+O agente pode:
+
+1. pesquisar na internet
+2. analisar fontes
+3. escrever o conteúdo
+4. gerar imagens
+5. montar o HTML
+6. enviar o email
+7. salvar relatório
+
+Tudo como um único sistema inteligente.
+
+---
+
+## Diferença resumida
+
+| Tipo       | Característica                     |
+| ---------- | ---------------------------------- |
+| Chatbot    | responde perguntas                 |
+| Automação  | executa passos fixos               |
+| Agentic AI | decide e executa tarefas completas |
+
+---
+
+## Forma simples de entender
+
+* Chatbot = um consultor que responde perguntas
+* Automação = uma máquina programada
+* Agentic AI = um assistente que faz o trabalho
+
+---
+
+✅ Em uma frase:
+Agentic AI é um sistema de IA que planeja, decide e executa tarefas usando ferramentas para atingir um objetivo, enquanto modelos tradicionais apenas respondem ou seguem 
+
+
+
+
+## Workflows Agentic e a nova forma de construir automações com IA
+
+Os workflows agentic representam uma nova forma de usar inteligência artificial para automatizar tarefas complexas. Em vez de criar automações rígidas e totalmente programadas passo a passo, os sistemas agentic utilizam um agente de IA que entende objetivos e executa processos completos, usando ferramentas e lógica para chegar ao resultado final.
+
+Essa abordagem está ganhando destaque porque permite construir sistemas mais flexíveis, rápidos de desenvolver e capazes de lidar melhor com situações inesperadas.
+
+---
+
+# 1. Por que workflows agentic estão se tornando importantes
+
+O uso de agentes de IA está crescendo rapidamente e muitas empresas já estão testando ou adotando esse tipo de sistema. Isso acontece porque os negócios começaram a perceber os limites das automações tradicionais.
+
+Nos próximos anos, a tendência é que cada vez mais processos empresariais sejam executados por sistemas de IA que:
+
+* analisam informações
+* tomam decisões
+* executam tarefas em várias etapas
+
+Por isso, saber criar e estruturar workflows agentic está se tornando uma habilidade muito valiosa.
+
+---
+
+# 2. Diferença entre automação tradicional e workflows agentic
+
+### Automação tradicional
+
+Automação tradicional funciona como um fluxo fixo. Cada etapa precisa ser definida manualmente.
+
+Características principais:
+
+* todos os passos são programados manualmente
+* o fluxo segue regras rígidas
+* qualquer erro ou exceção pode quebrar o sistema
+* manutenção costuma ser frequente
+
+Se algo inesperado acontece, alguém precisa entrar e corrigir manualmente o problema.
+
+---
+
+### Workflows agentic
+
+Nos workflows agentic, um agente de IA ajuda a construir e executar o processo.
+
+Nesse modelo:
+
+* o agente ajuda a definir a lógica do sistema
+* ele pode adaptar o processo durante testes
+* o desenvolvimento é mais rápido
+* problemas e exceções são detectados mais cedo
+
+Isso reduz muito o tempo necessário para construir sistemas complexos.
+
+---
+
+# 3. O limite do “self-healing”
+
+Um ponto importante é entender que a capacidade do agente de corrigir problemas sozinho funciona principalmente durante o desenvolvimento.
+
+Quando o sistema está sendo construído e testado, o agente consegue:
+
+* identificar erros
+* ajustar a lógica
+* modificar ferramentas
+* tentar novas abordagens
+
+Depois que o sistema é colocado em produção, normalmente o que é executado são:
+
+* os workflows
+* as tools (ferramentas)
+
+Ou seja, o agente não está pensando continuamente da mesma forma que durante o desenvolvimento.
+
+Nesse estágio, o sistema passa a se comportar mais como uma automação tradicional — o que pode ser positivo, porque sistemas previsíveis são mais estáveis para operação.
+
+---
+
+# 4. Onde está a principal vantagem dos sistemas agentic
+
+A maior vantagem não está apenas na execução do sistema, mas na forma como ele é construído.
+
+Podemos imaginar duas situações:
+
+Automação tradicional é como construir uma ferrovia manualmente, colocando cada trilho, cada conexão e cada detalhe.
+
+Workflows agentic funcionam mais como pedir para uma equipe construir a ferrovia, explicando apenas o destino e as regras principais.
+
+O agente ajuda a:
+
+* estruturar o sistema
+* lidar com situações que o desenvolvedor não pensou
+* acelerar o processo de construção
+* reduzir erros no design inicial
+
+Depois disso, o sistema pode ser testado várias vezes antes de ser colocado em produção.
+
+---
+
+# 5. Por que isso está se tornando possível agora
+
+Essa mudança está acontecendo porque a tecnologia finalmente chegou a um nível em que esses sistemas são viáveis.
+
+Alguns fatores importantes:
+
+Modelos de linguagem mais confiáveis
+Os LLMs conseguem raciocinar melhor e executar tarefas em várias etapas.
+
+Novos padrões de arquitetura
+Estruturas como:
+
+* skills
+* MCP
+* frameworks de agentes
+
+facilitam a organização desses sistemas.
+
+Infraestrutura moderna
+Ferramentas de deploy e execução simplificaram muito o processo.
+
+Ferramentas mais acessíveis
+Ambientes como Claude Code permitem construir sistemas
+
+
+complexos usando linguagem natural, sem precisar programar tudo manualmente.
+
+---
+
+# 6. A importância dos fundamentos
+
+Apesar das novas ferramentas, entender automação tradicional continua sendo extremamente importante.
+
+Quem conhece conceitos como:
+
+* APIs
+* webhooks
+* integração de sistemas
+* lógica de automação
+
+consegue orientar melhor o agente e avaliar se o sistema que está sendo criado realmente faz sentido.
+
+Sem essa base, existe o risco de aceitar soluções que parecem funcionar, mas que possuem falhas estruturais.
+
+---
+
+# 7. Como funciona um workflow agentic na prática
+
+Um exemplo comum de aplicação seria um sistema para criar newsletters automaticamente.
+
+Nesse tipo de workflow, o agente poderia:
+
+1. pesquisar informações sobre um tema
+2. estruturar o conteúdo
+3. gerar imagens ou infográficos
+4. montar o layout do email em HTML
+5. enviar o conteúdo para uma lista de emails
+
+Tudo isso a partir de um único comando inicial.
+
+---
+
+# 8. Estrutura de um sistema agentic
+
+Uma forma comum de organizar esses sistemas é através do modelo:
+
+WAT – Workflows, Agent e Tools
+
+### Agent
+
+O agente é a inteligência que interpreta instruções e decide como executar as tarefas.
+
+### Workflows
+
+Os workflows são os processos descritos em linguagem natural que explicam ao agente como realizar determinada tarefa.
+
+Eles funcionam como um roteiro ou receita.
+
+### Tools
+
+As tools são as ferramentas que o agente pode utilizar, como:
+
+* pesquisar dados
+* gerar imagens
+* enviar emails
+* salvar arquivos
+
+Sem a estrutura do workflow, as ferramentas isoladas não são suficientes.
+
+---
+
+# 9. Planejamento antes da construção
+
+Antes de construir um sistema agentic, normalmente é feito um planejamento do processo.
+
+Nesse estágio são definidos pontos como:
+
+* quais fontes de dados serão usadas
+* qual será o formato do resultado final
+* quais ferramentas serão necessárias
+* como o sistema será entregue ao usuário
+
+Esse planejamento ajuda o agente a gerar uma arquitetura mais adequada.
+
+---
+
+# 10. Uso de contexto e identidade visual
+
+Os sistemas também podem utilizar contexto adicional, como:
+
+* logotipos
+* cores da marca
+* guias de estilo
+
+Isso permite que os conteúdos gerados pela IA mantenham consistência visual e identidade de marca.
+
+---
+
+# 11. Componentes criados em um workflow
+
+Depois que o sistema é planejado, normalmente são criados alguns componentes principais:
+
+### Arquivos de configuração
+
+Definem padrões de estilo, estrutura ou dados do sistema.
+
+### Ferramentas
+
+Funções específicas que executam tarefas, como:
+
+* pesquisa
+* geração de imagens
+* montagem de conteúdo
+* envio de mensagens
+* armazenamento de dados
+
+### Workflow principal
+
+Um arquivo que descreve passo a passo como o processo deve acontecer.
+
+---
+
+# 12. Segurança e uso de credenciais
+
+Sistemas agentic frequentemente utilizam APIs externas. Por isso, as chaves de acesso são armazenadas em arquivos seguros de ambiente, em vez de ficarem expostas diretamente no código.
+
+Isso protege:
+
+* credenciais
+* integrações externas
+* dados sensíveis.
+
+---
+
+# 13. Testes e iteração
+
+Depois de construído, o sistema passa por testes.
+
+Durante essa fase podem surgir problemas como:
+
+* erros de formatação
+* problemas de integração
+* endpoints incorretos
+* falhas de acesso a serviços externos
+
+O agente pode ajudar a investigar esses erros e sugerir correções, acelerando o processo de ajuste.
+
+---
+
+# 14. Melhoria contínua
+
+Uma característica importante desses sistemas é que eles melhoram com o uso.
+
+Com mais execuções e ajustes, é possível:
+
+* melhorar os workflows
+* aprimorar as ferramentas
+* adicionar mais contexto
+* tornar o sistema mais confiável.
+
+---
+
+# 15. Deploy e automação completa
+
+Depois que o sistema está estável, ele pode ser colocado em produção.
+
+Nesse estágio ele pode ser executado automaticamente, por exemplo:
+
+* todos os dias
+* semanalmente
+* sempre que um evento acontece.
+
+---
+
+# 16. Uso de skills
+
+Outro conceito importante é o de skills, que são conjuntos de instruções especializadas reutilizáveis.
+
+Uma skill pode ensinar o agente a:
+
+* criar layouts melhores
+* ge
+
+
+rar gráficos específicos
+* estruturar textos de determinada forma.
+
+Assim, o agente pode reutilizar esse conhecimento em diferentes projetos.
+
+---
+
+# 17. Acessibilidade da tecnologia
+
+Uma das maiores mudanças trazidas por esse tipo de sistema é a redução da barreira técnica.
+
+Hoje é possível construir sistemas complexos:
+
+* usando linguagem natural
+* sem escrever grande quantidade de código
+* integrando várias ferramentas automaticamente.
+
+Isso abre espaço para muito mais pessoas criarem soluções com IA.
+
+---
+
+# 18. Como gerar valor real com esses sistemas
+
+Apesar da tecnologia ser poderosa, o maior valor não está em construir sistemas impressionantes, mas em resolver problemas reais de operação.
+
+Muitos negócios enfrentam problemas como:
+
+* perda de leads
+* processos manuais demorados
+* erros de dados
+* operações lentas.
+
+Identificar esses gargalos e automatizá-los é o que realmente gera impacto.
+
+---
+
+# 19. A lógica do gargalo
+
+Um bom exemplo é pensar na operação de uma empresa como um sistema de encanamento.
+
+Se existe um ponto entupido, aumentar o fluxo de trabalho ou adicionar mais recursos não resolve o problema.
+
+Primeiro é necessário identificar o gargalo e removê-lo.
+
+Automação inteligente serve justamente para isso.
+
+---
+
+# 20. Posicionamento profissional
+
+Quem trabalha com esse tipo de tecnologia pode assumir dois papéis diferentes:
+
+Um executor que apenas constrói automações.
+
+Ou um especialista que:
+
+* analisa processos
+* identifica problemas
+* projeta soluções inteligentes.
+
+O segundo papel é muito mais valioso.
+
+---
+
+# 21. Modelos de precificação
+
+Uma abordagem comum é cobrar baseado no valor gerado pela solução, e não apenas no tempo de trabalho.
+
+Se uma automação economiza milhares de dólares por mês para uma empresa, o valor da solução deve refletir esse impacto.
+
+Isso cria uma relação em que:
+
+* o cliente ganha eficiência
+* o profissional recebe de acordo com o valor entregue.
+
+---
+
+# 22. Relacionamentos de longo prazo
+
+Depois que uma empresa vê resultados com um primeiro sistema, novas oportunidades surgem naturalmente.
+
+Isso pode incluir:
+
+* otimização de processos existentes
+* criação de novas automações
+* expansão do sistema para outras áreas.
+
+Assim, projetos pequenos podem evoluir para parcerias duradouras.
+
+---
+
+# 23. Caminho profissional
+
+Muitas pessoas que trabalham com automação seguem uma evolução natural:
+
+freelancer → consultor → parceiro estratégico
+
+Nesse estágio final, o profissional não apenas implementa tecnologia, mas ajuda empresas a tornar suas operações mais eficientes.
+
+---
+
+# Conclusão
+
+Os workflows agentic representam uma nova forma de construir automações inteligentes. Eles combinam agentes de IA, ferramentas e processos estruturados para executar tarefas complexas com mais eficiência.
+
+Mais do que uma tecnologia, eles representam uma mudança na forma como sistemas são projetados: menos programação manual e mais colaboração entre humanos e inteligência artificial.
+
+Quem aprende a usar esse tipo de sistema para resolver problemas reais de operação pode transformar essa habilidade em soluções de alto valor para empresas e organizações.
+
+
+
+
+Como Ser Competente em Criar Sistemas AGENTIC
+
+Para fazer isso bem, os talentos mais importantes são uma mistura de técnica, raciocínio e negócio.
+
+## Talentos principais
+
+### 1. Pensamento de processos
+
+Você precisa enxergar um trabalho como fluxo:
+
+* onde começa;
+* quais etapas existem;
+* onde quebra;
+* o que pode ser automatizado;
+* o que precisa de revisão humana.
+
+Esse é talvez o talento mais importante. Quem sabe mapear processo consegue criar workflow bom.
+
+### 2. Clareza para dar instruções
+
+Ferramentas agentic funcionam muito melhor quando você sabe:
+
+* explicar o objetivo;
+* definir contexto;
+* dizer restrições;
+* descrever resultado esperado.
+
+Não é só “saber promptar”, é saber pensar com precisão.
+
+### 3. Noção de automação e integrações
+
+Mesmo usando ferramentas que facilitam muito, ajuda bastante entender:
+
+* APIs;
+* webhooks;
+* autenticação;
+* gatilhos;
+* entradas e saídas de dados;
+* tratamento de erro.
+
+Você não precisa ser um grande programador, mas precisa entender a lógica.
+
+### 4. Capacidade de diagnosticar problemas reais
+
+O mercado paga mais por quem identifica o gargalo certo do que por quem só monta uma automação bonita.
+
+Então um talento-chave é:
+
+* observar operação;
+* descobrir desperdícios;
+* achar tarefas repetitivas;
+* identificar onde a empresa perde tempo, dinheiro ou qualidade.
+
+### 5. Raciocínio lógico
+
+Workflows bons dependem de:
+
+* sequência correta;
+* condições;
+* exceções;
+* validação;
+* fallback.
+
+Quem tem mente lógica consegue estruturar melhor as etapas.
+
+### 6. Curiosidade e experimentação
+
+Esse tipo de trabalho exige testar muito:
+
+* rodar versão 1;
+* ver erro;
+* ajustar;
+* testar de novo;
+* melhorar tool, workflow e instruções.
+
+Quem espera acertar de primeira sofre mais.
+
+### 7. Senso de produto
+
+Não basta automatizar. Precisa pensar:
+
+* isso resolve um problema real?
+* a experiência final ficou boa?
+* está confiável?
+* alguém usaria isso toda semana?
+
+Esse olhar separa demo de solução útil.
+
+### 8. Comunicação com clientes ou equipe
+
+Se você quiser ganhar dinheiro com isso, precisa traduzir tecnologia em valor:
+
+* horas economizadas;
+* erros reduzidos;
+* receita aumentada;
+* tempo de resposta menor.
+
+Quem sabe conversar com negócio sai na frente.
+
+### 9. Organização
+
+Projetos agentic ficam melhores quando você mantém:
+
+* arquivos bem estruturados;
+* workflows claros;
+* tools separadas;
+* configs organizadas;
+* credenciais protegidas;
+* padrões reutilizáveis.
+
+### 10. Senso crítico
+
+Nem tudo que o agente gera está bom. Então você precisa perceber:
+
+* quando a resposta ficou fraca;
+* quando a lógica está errada;
+* quando a automação está frágil;
+* quando o resultado “parece bom”, mas não serve na prática.
+
+## Em resumo
+
+Os talentos centrais são:
+
+* pensar processos
+* dar instruções claras
+* entender automação
+* diagnosticar gargalos
+* ter lógica
+* testar e iterar
+* comunicar valor de negócio
+
+## O que pesa mais na prática
+
+Se eu tivesse que reduzir a 3 talentos mais decisivos, seriam:
+
+1. Pensamento de processos
+2. Clareza para orientar o agente
+3. Capacidade de achar problemas valiosos para resolver
+
+Porque a ferramenta pode ajudar no código, mas ela não substitui bem quem sabe o que construir e por que construir.
+
+
+
+## O que fazer na prática com Agentic Workflows
+
+### 1️⃣ Identifique um processo repetitivo
+
+Primeiro encontre algo que acontece sempre e segue etapas claras.
+
+Exemplos:
+
+* criar newsletters
+* responder leads
+* pesquisar concorrentes
+* gerar relatórios
+* organizar dados
+* criar posts de conteúdo
+
+Se é algo que alguém faz manualmente toda semana → é candidato a automação agentic.
+
+---
+
+# 2️⃣ Defina o objetivo do agente
+
+Em vez de programar tudo, você define o objetivo final.
+
+Exemplo:
+
+> Criar uma newsletter sobre um tema, com pesquisa, imagens e envio por email.
+
+---
+
+# 3️⃣ Estruture o workflow
+
+O processo vira um fluxo de etapas.
+
+Exemplo prático:
+
+1. pesquisar o tema
+2. coletar dados relevantes
+3. escrever o conteúdo
+4. gerar imagens ou gráficos
+5. montar o layout
+6. enviar email
+7. salvar relatório
+
+Isso vira um workflow.
+
+---
+
+# 4️⃣ Crie as ferramentas (tools)
+
+Cada etapa usa uma ferramenta.
+
+Exemplo:
+
+| Tool            | Função            |
+| --------------- | ----------------- |
+| Research        | pesquisar dados   |
+| Writer          | gerar texto       |
+| Image generator | criar imagens     |
+| HTML builder    | montar email      |
+| Email sender    | enviar newsletter |
+| Sheets logger   | registrar dados   |
+
+O agente escolhe e usa essas tools.
+
+---
+
+# 5️⃣ Teste o sistema
+
+Você roda o workflow com um comando simples.
+
+Exemplo:
+
+> Crie uma newsletter sobre Agentic AI
+
+O sistema então:
+
+* pesquisa
+* escreve
+* gera imagens
+* monta email
+* envia
+
+Tudo automaticamente.
+
+---
+
+# 6️⃣ Corrija erros
+
+Durante o teste podem surgir erros como:
+
+* problema de API
+* formatação errada
+* integração quebrada
+
+Você apenas pede:
+
+> investigue o erro e corrija
+
+O agente tenta resolver.
+
+---
+
+# 7️⃣ Melhore o workflow
+
+Depois do primeiro teste você ajusta:
+
+* qualidade do texto
+* estilo visual
+* fontes de dados
+* regras do processo
+
+Cada versão melhora o sistema.
+
+---
+
+# 8️⃣ Automatize a execução
+
+Quando estiver funcionando bem:
+
+* agenda execução automática
+* exemplo: toda segunda às 6h
+
+Ferramentas comuns:
+
+* trigger.dev
+* modal
+* vercel
+* cron jobs
+
+---
+
+# 9️⃣ Use isso para resolver problemas reais
+
+Não venda tecnologia.
+Venda solução de problema.
+
+Problemas comuns nas empresas:
+
+* leads não respondidos
+* atendimento lento
+* geração manual de relatórios
+* entrada manual de dados
+* marketing repetitivo
+
+Automação resolve isso.
+
+---
+
+# 🔟 Cobrar pelo valor gerado
+
+Exemplo prático:
+
+Se sua automação economiza:
+
+20 horas por semana
+
+ou
+
+$10.000 por mês
+
+Você pode cobrar:
+
+* $3k
+* $5k
+* $10k
+
+Porque o cliente recupera o valor rapidamente.
+
+---
+
+# A ideia central prática
+
+Não é sobre IA.
+
+É sobre resolver processos de negócio com IA.
+
+Fluxo real:
+
+encontrar problema
+↓
+desenhar workflow
+↓
+criar tools
+↓
+testar
+↓
+corrigir
+↓
+automatizar
+↓
+entregar valor
+
+---
+
+## A frase mais prática de tudo
+
+Agentic workflow é simplesmente:
+
+> pegar um processo manual e transformar em um sistema que executa tudo sozinho.
