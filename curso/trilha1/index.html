@@ -8,14 +8,7 @@
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#FACC15',
-            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563', 500: '#6b7280' }
-          }
-        }
-      }
+      theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563', 500: '#6b7280' } } } }
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,9 +17,7 @@
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    html:not(.dark) body {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
-    }
+    html:not(.dark) body { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%); }
     html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
     html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
     html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
@@ -52,18 +43,9 @@
           <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Fundamentos Agentic</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">Construcao e Operacao</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Mercado e Produtos</span>
-          </a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos Agentic</span></a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Construcao e Operacao</span></a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Mercado e Produtos</span></a>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
             <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm4 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-.464 4.95.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414ZM17 11h-1a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2ZM4 10a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm.636 4.95a1 1 0 0 1 0 1.414l-.707.707A1 1 0 0 1 2.515 15.657l.707-.707a1 1 0 0 1 1.414 0ZM10 16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM5.05 4.636a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 4.343 2.515l.707.707a1 1 0 0 1 0 1.414ZM14.95 4.636a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0Z"/></svg>
             <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 0 1 6.707 2.707a8.001 8.001 0 1 0 10.586 10.586Z"/></svg>
@@ -77,7 +59,7 @@
     <section class="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/30 to-dark-800 p-8 sm:p-10">
       <div class="inline-flex items-center rounded-full bg-emerald-500/20 text-emerald-400 px-4 py-1.5 text-sm font-semibold mb-5">TRILHA 1</div>
       <h1 class="text-4xl sm:text-5xl font-bold mb-4">🌱 Fundamentos Agentic</h1>
-      <p class="text-lg text-neutral-300 mb-8 max-w-3xl">A trilha de entrada forma a base de raciocinio do engenheiro de agentic: objetivo, contexto, restricao, WAT, design de tools, memoria e primeiro mini projeto com entregavel observavel.</p>
+      <p class="text-lg text-neutral-300 mb-8 max-w-3xl">A trilha de entrada forma a base do engenheiro de agentic: especificacao, fundamentos tecnicos, arquitetura WAT, design de tools, memoria e primeiro mini projeto completo.</p>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">6</div><div class="text-sm text-neutral-400">Modulos</div></div>
         <div class="bg-dark-700 rounded-2xl p-4 border border-dark-600"><div class="text-2xl font-bold">36</div><div class="text-sm text-neutral-400">Aulas</div></div>
@@ -87,241 +69,112 @@
     </section>
 
     <section class="mt-12">
-      <h2 class="text-2xl font-bold mb-6">Visao rapida dos modulos</h2>
+      <p class="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">Mapa rapido</p>
+      <h2 class="text-2xl font-bold mb-6">Cards simples clicaveis</h2>
       <div class="grid md:grid-cols-2 gap-4">
-        <a href="modulo-1-1.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors">
-          <div class="text-emerald-400 font-semibold mb-2">1.1</div>
-          <h3 class="text-2xl font-bold mb-2">🧭 O que e Agentic AI e como pensar como engenheiro</h3>
-          <p class="text-neutral-400">Objetivo, contexto, restricao, criterio de sucesso e decomposicao de workflow.</p>
-        </a>
-        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
-          <div class="text-emerald-400 font-semibold mb-2">1.2</div>
-          <h3 class="text-2xl font-bold mb-2">🔌 Fundamentos tecnicos para workflows</h3>
-          <p class="text-neutral-400">API, JSON, webhooks, auth, `.env` e contratos de integracao.</p>
-        </div>
-        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
-          <div class="text-emerald-400 font-semibold mb-2">1.3</div>
-          <h3 class="text-2xl font-bold mb-2">🧱 WAT na pratica</h3>
-          <p class="text-neutral-400">Separacao entre workflow, agent e tools, com fronteiras claras.</p>
-        </div>
-        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
-          <div class="text-emerald-400 font-semibold mb-2">1.4</div>
-          <h3 class="text-2xl font-bold mb-2">🧰 Tool design e schemas</h3>
-          <p class="text-neutral-400">Descricao de tools, contratos, validacao e aprovacao humana.</p>
-        </div>
-        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
-          <div class="text-emerald-400 font-semibold mb-2">1.5</div>
-          <h3 class="text-2xl font-bold mb-2">🧠 Contexto, memoria e reutilizacao</h3>
-          <p class="text-neutral-400">Contexto de sessao, memoria persistente, skills e configuracao.</p>
-        </div>
-        <div class="rounded-2xl border border-dark-600 bg-dark-800 p-5">
-          <div class="text-emerald-400 font-semibold mb-2">1.6</div>
-          <h3 class="text-2xl font-bold mb-2">🚀 Primeiro mini projeto agentic</h3>
-          <p class="text-neutral-400">Pesquisa, sintese, validacao e entrega estruturada.</p>
-        </div>
+        <a href="modulo-1-1.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors"><div class="text-emerald-400 font-semibold mb-2">1.1</div><h3 class="text-2xl font-bold mb-2">🧭 O que e Agentic AI e como pensar como engenheiro</h3><p class="text-neutral-400">Objetivo, contexto, restricao, qualidade e decomposicao.</p></a>
+        <a href="modulo-1-2.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors"><div class="text-emerald-400 font-semibold mb-2">1.2</div><h3 class="text-2xl font-bold mb-2">🔌 Fundamentos tecnicos para workflows</h3><p class="text-neutral-400">API, JSON, webhook, auth, `.env` e tratamento de erro.</p></a>
+        <a href="modulo-1-3.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors"><div class="text-emerald-400 font-semibold mb-2">1.3</div><h3 class="text-2xl font-bold mb-2">🧱 WAT na pratica</h3><p class="text-neutral-400">Workflow, agent, tools, handoffs e observabilidade.</p></a>
+        <a href="modulo-1-4.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors"><div class="text-emerald-400 font-semibold mb-2">1.4</div><h3 class="text-2xl font-bold mb-2">🧰 Tool design e schemas</h3><p class="text-neutral-400">Descricoes, schema, validacao, falhas e aprovacoes.</p></a>
+        <a href="modulo-1-5.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors"><div class="text-emerald-400 font-semibold mb-2">1.5</div><h3 class="text-2xl font-bold mb-2">🧠 Contexto, memoria e reutilizacao</h3><p class="text-neutral-400">Sessao, memoria persistente, skills e checkpoints.</p></a>
+        <a href="modulo-1-6.html" class="rounded-2xl border border-dark-600 bg-dark-800 p-5 hover:border-emerald-400 transition-colors"><div class="text-emerald-400 font-semibold mb-2">1.6</div><h3 class="text-2xl font-bold mb-2">🚀 Primeiro mini projeto agentic</h3><p class="text-neutral-400">Fechamento da trilha com um projeto orientado a output.</p></a>
       </div>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-bold mb-6">Modulos detalhados</h2>
+      <p class="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">Detalhamento</p>
+      <h2 class="text-2xl font-bold mb-6">Cards completos dos modulos</h2>
+
       <div class="space-y-6">
         <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
-          <div class="p-6 border-b border-dark-600">
-            <div>
-              <div class="text-emerald-400 font-semibold mb-1">Modulo 1.1 • ~35 min</div>
-              <h3 class="text-2xl font-bold mb-2">🧭 O que e Agentic AI e como pensar como engenheiro</h3>
-              <p class="text-neutral-400">Modulo de abertura que muda o foco de hype para execucao: definir problema, medir qualidade e decompor trabalho.</p>
-            </div>
-          </div>
+          <div class="p-6 border-b border-dark-600"><div class="text-emerald-400 font-semibold mb-1">Modulo 1.1 • ~35 min</div><h3 class="text-2xl font-bold mb-2">🧭 O que e Agentic AI e como pensar como engenheiro</h3><p class="text-neutral-400">Modulo de abertura focado em criterio, escopo e decomposicao de trabalho.</p></div>
           <div class="divide-y divide-dark-600">
-            <div class="topic-item">
-              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span>
-                <div><div class="font-semibold">🔍 Chatbot, automacao e agentic</div><div class="text-sm text-neutral-400">Onde cada abordagem funciona e onde falha</div></div>
-              </button>
-              <div class="topic-explanation px-6 pb-5">
-                <div class="grid gap-3">
-                  <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                    <strong class="text-emerald-400">O que e:</strong>
-                    <p class="text-neutral-300 mt-1">comparacao operacional entre resposta pontual, fluxo fixo e execucao orientada a objetivo.</p>
-                  </div>
-                  <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4">
-                    <strong class="text-blue-400">Por que aprender:</strong>
-                    <p class="text-neutral-300 mt-1">evita vender ou construir agentic para problemas que pedem apenas automacao deterministica.</p>
-                  </div>
-                  <div class="rounded-2xl border border-primary/40 bg-primary/10 p-4">
-                    <strong class="text-primary">Conceitos-chave:</strong>
-                    <p class="text-neutral-300 mt-1">objetivo, autonomia limitada, escopo, decisao e previsibilidade.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="topic-item">
-              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span>
-                <div><div class="font-semibold">🎯 Objetivo, contexto e restricao</div><div class="text-sm text-neutral-400">A base da especificacao de qualquer workflow</div></div>
-              </button>
-              <div class="topic-explanation px-6 pb-5">
-                <div class="grid gap-3">
-                  <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                    <strong class="text-emerald-400">O que e:</strong>
-                    <p class="text-neutral-300 mt-1">definicao do trabalho a ser feito, das informacoes disponiveis e dos limites de execucao.</p>
-                  </div>
-                  <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4">
-                    <strong class="text-blue-400">Por que aprender:</strong>
-                    <p class="text-neutral-300 mt-1">sem isso o agente improvisa demais e a qualidade cai rapidamente.</p>
-                  </div>
-                  <div class="rounded-2xl border border-primary/40 bg-primary/10 p-4">
-                    <strong class="text-primary">Conceitos-chave:</strong>
-                    <p class="text-neutral-300 mt-1">input, output, restricoes, fontes confiaveis e criterios de aceite.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="topic-item">
-              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span>
-                <div><div class="font-semibold">📏 Criterios de sucesso e falha</div><div class="text-sm text-neutral-400">Como parar de avaliar “no feeling”</div></div>
-              </button>
-              <div class="topic-explanation px-6 pb-5">
-                <div class="grid gap-3">
-                  <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                    <strong class="text-emerald-400">O que e:</strong>
-                    <p class="text-neutral-300 mt-1">definicao objetiva do que significa saida correta, incompleta ou perigosa.</p>
-                  </div>
-                  <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4">
-                    <strong class="text-blue-400">Por que aprender:</strong>
-                    <p class="text-neutral-300 mt-1">sem criterio objetivo nao existe eval, regressao nem melhoria consistente.</p>
-                  </div>
-                  <div class="rounded-2xl border border-primary/40 bg-primary/10 p-4">
-                    <strong class="text-primary">Conceitos-chave:</strong>
-                    <p class="text-neutral-300 mt-1">completeness, correctness, safety, traceability e formato de saida.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="topic-item">
-              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span>
-                <div><div class="font-semibold">🧩 Decomposicao de tarefas</div><div class="text-sm text-neutral-400">Quebrar problemas em etapas testaveis</div></div>
-              </button>
-              <div class="topic-explanation px-6 pb-5">
-                <div class="grid gap-3">
-                  <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                    <strong class="text-emerald-400">O que e:</strong>
-                    <p class="text-neutral-300 mt-1">separacao de um objetivo maior em subetapas menores, mais verificaveis e mais seguras.</p>
-                  </div>
-                  <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4">
-                    <strong class="text-blue-400">Por que aprender:</strong>
-                    <p class="text-neutral-300 mt-1">workflows bons nascem de decomposicao boa, nao de prompts maiores.</p>
-                  </div>
-                  <div class="rounded-2xl border border-primary/40 bg-primary/10 p-4">
-                    <strong class="text-primary">Conceitos-chave:</strong>
-                    <p class="text-neutral-300 mt-1">fases, dependencias, checkpoints, handoff e validacao parcial.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="topic-item">
-              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span>
-                <div><div class="font-semibold">⚖️ Fluxo fixo vs decisao do agente</div><div class="text-sm text-neutral-400">Onde deixar liberdade e onde nao</div></div>
-              </button>
-              <div class="topic-explanation px-6 pb-5">
-                <div class="grid gap-3">
-                  <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                    <strong class="text-emerald-400">O que e:</strong>
-                    <p class="text-neutral-300 mt-1">criterio de arquitetura para escolher o que e deterministico e o que pode ser agentico.</p>
-                  </div>
-                  <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4">
-                    <strong class="text-blue-400">Por que aprender:</strong>
-                    <p class="text-neutral-300 mt-1">grande parte dos erros em agentic vem de autonomia mal distribuida.</p>
-                  </div>
-                  <div class="rounded-2xl border border-primary/40 bg-primary/10 p-4">
-                    <strong class="text-primary">Conceitos-chave:</strong>
-                    <p class="text-neutral-300 mt-1">previsibilidade, risco, custo, branching e guardrails.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="topic-item">
-              <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
-                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span>
-                <div><div class="font-semibold">🧪 Laboratorio de especificacao</div><div class="text-sm text-neutral-400">Primeiro artefato de engenharia do curso</div></div>
-              </button>
-              <div class="topic-explanation px-6 pb-5">
-                <div class="grid gap-3">
-                  <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                    <strong class="text-emerald-400">O que e:</strong>
-                    <p class="text-neutral-300 mt-1">exercicio para transformar uma necessidade de negocio em spec operacional de workflow.</p>
-                  </div>
-                  <div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4">
-                    <strong class="text-blue-400">Por que aprender:</strong>
-                    <p class="text-neutral-300 mt-1">e o primeiro filtro entre curiosidade sobre agentic e pratica de engenharia agentic.</p>
-                  </div>
-                  <div class="rounded-2xl border border-primary/40 bg-primary/10 p-4">
-                    <strong class="text-primary">Conceitos-chave:</strong>
-                    <p class="text-neutral-300 mt-1">spec, contrato, saida esperada, erro aceitavel e entregavel observavel.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span><div><div class="font-semibold">🔍 Chatbot, automacao e agentic</div><div class="text-sm text-neutral-400">Onde cada abordagem funciona e onde falha</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">comparacao operacional entre resposta pontual, fluxo fixo e execucao orientada a objetivo.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">evita vender ou construir agentic para problemas que pedem automacao deterministica.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">objetivo, autonomia limitada, escopo e previsibilidade.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span><div><div class="font-semibold">🎯 Objetivo, contexto e restricao</div><div class="text-sm text-neutral-400">A base da especificacao</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">definicao do trabalho, informacoes disponiveis e limites de execucao.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem isso o agente improvisa e a qualidade cai.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">input, output, restricoes e criterios de aceite.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span><div><div class="font-semibold">📏 Criterios de sucesso e falha</div><div class="text-sm text-neutral-400">Parar de avaliar “no feeling”</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">definicao objetiva do que e saida correta, incompleta ou perigosa.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem criterio objetivo nao existe melhoria consistente.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">corretude, completude, formato e seguranca.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span><div><div class="font-semibold">🧩 Decomposicao de tarefas</div><div class="text-sm text-neutral-400">Quebrar problemas em etapas</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">separacao de um objetivo maior em subetapas verificaveis.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">workflows bons nascem de decomposicao boa, nao de prompts maiores.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">fases, checkpoints, handoffs e validacao parcial.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span><div><div class="font-semibold">⚖️ Fluxo fixo vs decisao do agente</div><div class="text-sm text-neutral-400">Onde deixar liberdade</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">criterio de arquitetura para separar partes deterministicas e partes agenticas.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">muitos erros surgem de autonomia mal distribuida.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">risco, custo, branching e guardrails.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span><div><div class="font-semibold">🧪 Laboratorio de especificacao</div><div class="text-sm text-neutral-400">Primeiro artefato do curso</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">exercicio para transformar uma necessidade em spec operacional.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">filtra curiosidade e inicia pratica de engenharia agentic.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">spec, contrato, saida esperada e risco aceitavel.</p></div></div></div></div>
           </div>
-          <div class="p-6 border-t border-dark-600">
-            <div class="flex justify-start space-x-3">
-              <a href="modulo-1-1.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a>
-              <button onclick="openModal('modal-1-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
-            </div>
-          </div>
+          <div class="p-6 border-t border-dark-600"><div class="flex justify-start space-x-3"><a href="modulo-1-1.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a><button onclick="openModal('modal-1-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button></div></div>
         </div>
 
-        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
-          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.2 • ~40 min</div>
-          <h3 class="text-2xl font-bold mb-2">🔌 Fundamentos tecnicos para workflows</h3>
-          <p class="text-neutral-400">API, JSON, webhook, auth, `.env` e contratos de integracao para preparar as ferramentas do agente.</p>
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
+          <div class="p-6 border-b border-dark-600"><div class="text-emerald-400 font-semibold mb-1">Modulo 1.2 • ~40 min</div><h3 class="text-2xl font-bold mb-2">🔌 Fundamentos tecnicos para workflows</h3><p class="text-neutral-400">Leitura tecnica minima para integrar systems, contratos e ferramentas com seguranca basica.</p></div>
+          <div class="divide-y divide-dark-600">
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span><div><div class="font-semibold">🌐 APIs, requests e responses</div><div class="text-sm text-neutral-400">Interface entre tools e sistemas externos</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">comunicacao entre sistemas usando endpoint, metodo, payload e resposta.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem entender API nao se desenha tool confiavel.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">GET, POST, headers, status code e timeout.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span><div><div class="font-semibold">🧾 JSON, arquivos e estrutura</div><div class="text-sm text-neutral-400">Input e output padronizados</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">formato de dados para mover informacao entre etapas.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">saida mal estruturada quebra integracoes.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">schema, campos obrigatorios, parser e serializacao.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span><div><div class="font-semibold">🪝 Webhooks e eventos</div><div class="text-sm text-neutral-400">Como workflows entram em movimento</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">mecanismo que dispara execucoes quando um evento acontece.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">fluxos reais geralmente nascem por evento, nao por prompt manual.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">trigger, assinatura, fila e idempotencia.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span><div><div class="font-semibold">🔐 Auth, secrets e .env</div><div class="text-sm text-neutral-400">Base de seguranca operacional</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">protecao de credenciais fora do codigo e do prompt.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">agentic sem segregacao de segredos vira risco operacional.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">token, escopo, rotacao e least privilege.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span><div><div class="font-semibold">🧪 Contratos e tratamento de erro</div><div class="text-sm text-neutral-400">Confiabilidade minima de integracao</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">acordo de entradas, saidas e estados de erro aceitos.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem contrato o agente confunde erro tecnico e de negocio.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">fallback, retry, erro recuperavel e validacao.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span><div><div class="font-semibold">🛠️ Laboratorio de mini integracao</div><div class="text-sm text-neutral-400">Conectar uma API real</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">exercicio para consumir endpoint, validar resposta e gerar output usavel.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">faz o aluno sair da teoria e lidar com integracao real.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">request, parse, erro e output padronizado.</p></div></div></div></div>
+          </div>
+          <div class="p-6 border-t border-dark-600"><div class="flex justify-start space-x-3"><a href="modulo-1-2.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a><button onclick="openModal('modal-1-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button></div></div>
         </div>
-        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
-          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.3 • ~35 min</div>
-          <h3 class="text-2xl font-bold mb-2">🧱 WAT na pratica</h3>
-          <p class="text-neutral-400">Separar workflow, agent e tools para evitar bagunca de responsabilidade.</p>
+
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
+          <div class="p-6 border-b border-dark-600"><div class="text-emerald-400 font-semibold mb-1">Modulo 1.3 • ~35 min</div><h3 class="text-2xl font-bold mb-2">🧱 WAT na pratica</h3><p class="text-neutral-400">Separar workflow, agent e tools para evitar sistemas confusos e pouco auditaveis.</p></div>
+          <div class="divide-y divide-dark-600">
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span><div><div class="font-semibold">🗺️ Workflow como espinha dorsal</div><div class="text-sm text-neutral-400">Ordem, checkpoints e fluxo</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">camada que define fases, transicoes e validacoes locais.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem workflow explicito o debug piora muito.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">fases, transicao, checkpoint e gate.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span><div><div class="font-semibold">🧠 Agent como camada de decisao</div><div class="text-sm text-neutral-400">Julgamento contextual com limites</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">camada que interpreta objetivo e escolhe a proxima acao.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">ajuda a dar autonomia so onde existe valor.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">planejamento, escolha de tool e contexto.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span><div><div class="font-semibold">🛠️ Tools como alavancas concretas</div><div class="text-sm text-neutral-400">Ferramentas pequenas e auditaveis</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">funcoes especializadas para ler, escrever, consultar ou transformar dados.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">tools bem desenhadas reduzem improviso do modelo.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">single responsibility, schema e side effect.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span><div><div class="font-semibold">🔀 Handoffs e composicao</div><div class="text-sm text-neutral-400">Passagem de responsabilidade</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">transicao controlada entre agentes, subtarefas ou fases.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">composicao clara permite crescer sem virar prompt monolitico.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">handoff, payload e ownership.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span><div><div class="font-semibold">👀 Observabilidade inicial</div><div class="text-sm text-neutral-400">Visibilidade do que o sistema fez</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">registro de etapa, decisao, input, output e erro.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem visibilidade nao ha prova de valor nem bom debug.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">trace, log e correlation id.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span><div><div class="font-semibold">🏗️ Laboratorio de mapa WAT</div><div class="text-sm text-neutral-400">Transformar um caso em arquitetura simples</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">exercicio para desenhar workflow, decisoes agenticas e tools necessarias.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">primeiro passo para sair de pecas soltas e chegar em arquitetura coerente.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">mapa, fronteira, responsabilidade e dependencia.</p></div></div></div></div>
+          </div>
+          <div class="p-6 border-t border-dark-600"><div class="flex justify-start space-x-3"><a href="modulo-1-3.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a><button onclick="openModal('modal-1-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button></div></div>
         </div>
-        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
-          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.4 • ~45 min</div>
-          <h3 class="text-2xl font-bold mb-2">🧰 Tool design e schemas</h3>
-          <p class="text-neutral-400">Descricao, contrato, tratamento de erro, validacao e aprovacoes humanas.</p>
+
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
+          <div class="p-6 border-b border-dark-600"><div class="text-emerald-400 font-semibold mb-1">Modulo 1.4 • ~45 min</div><h3 class="text-2xl font-bold mb-2">🧰 Tool design e schemas</h3><p class="text-neutral-400">Desenhar ferramentas pequenas, previsiveis e seguras para aumentar a qualidade do agente.</p></div>
+          <div class="divide-y divide-dark-600">
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span><div><div class="font-semibold">📝 Descricao de tool</div><div class="text-sm text-neutral-400">Nome e escopo evitam erro</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">texto que explica para que a tool serve, quando usar e quando nao usar.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">descricao ruim leva a chamadas erradas mesmo com boa implementacao.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">intent, scope e misuse.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span><div><div class="font-semibold">📦 Schema de entrada e saida</div><div class="text-sm text-neutral-400">Contratos que diminuem ambiguidade</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">definicao dos campos esperados e do formato da resposta.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">schema claro reduz erro e facilita validacao.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">required, optional, enum e output shape.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span><div><div class="font-semibold">✅ Validacao e tipos</div><div class="text-sm text-neutral-400">Barreira minima antes da execucao</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">checagem de tipo, formato e consistencia antes do side effect.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">evita que input ruim vire acao errada.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">parse, coercion e precondition.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span><div><div class="font-semibold">🚨 Erros recuperaveis e nao recuperaveis</div><div class="text-sm text-neutral-400">Quando insistir e quando parar</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">classificacao de falhas em casos de retry, fallback ou interrupcao.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">ajuda a conter custo e loops ruins.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">retry, backoff e terminal error.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span><div><div class="font-semibold">👤 Aprovacao humana e side effects</div><div class="text-sm text-neutral-400">Controlar acoes sensiveis</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">checkpoint manual antes de enviar, excluir ou alterar estado sensivel.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">engenharia agentic falha quando ha autonomia demais em operacoes de risco.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">approval gate, preview e human-in-the-loop.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span><div><div class="font-semibold">🧪 Laboratorio de tool calling</div><div class="text-sm text-neutral-400">Desenhar, testar e refinar 3 tools</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">criar ferramentas com schema, testar entradas invalidas e ajustar descricoes.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">mostra que a qualidade das tools define a qualidade do agente.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">schema, validation, misuse e guardrail.</p></div></div></div></div>
+          </div>
+          <div class="p-6 border-t border-dark-600"><div class="flex justify-start space-x-3"><a href="modulo-1-4.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a><button onclick="openModal('modal-1-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button></div></div>
         </div>
-        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
-          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.5 • ~40 min</div>
-          <h3 class="text-2xl font-bold mb-2">🧠 Contexto, memoria e reutilizacao</h3>
-          <p class="text-neutral-400">Contexto de sessao, memoria persistente, skills e configuracoes reutilizaveis.</p>
+
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
+          <div class="p-6 border-b border-dark-600"><div class="text-emerald-400 font-semibold mb-1">Modulo 1.5 • ~40 min</div><h3 class="text-2xl font-bold mb-2">🧠 Contexto, memoria e reutilizacao</h3><p class="text-neutral-400">Controlar o que o sistema sabe, o que precisa lembrar e o que deve ser reaproveitado.</p></div>
+          <div class="divide-y divide-dark-600">
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span><div><div class="font-semibold">💬 Contexto de sessao</div><div class="text-sm text-neutral-400">O que o agente precisa saber agora</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">informacoes imediatas e relevantes para a execucao corrente.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">contexto demais aumenta custo e ruido; de menos derruba qualidade.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">window, relevance e pruning.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span><div><div class="font-semibold">🗃️ Memoria persistente</div><div class="text-sm text-neutral-400">O que precisa sobreviver entre execucoes</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">dados guardados para reutilizar em execucoes futuras.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem memoria persistente o agente repete perguntas e perde estado.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">history, state, cache e profile.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span><div><div class="font-semibold">📌 Estado e checkpoints</div><div class="text-sm text-neutral-400">Como retomar sem comecar do zero</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">registro do andamento da execucao com marcos claros de pausa e retomada.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">checkpoints reduzem custo de falha e facilitam reprocessamento parcial.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">resume, checkpoint e partial output.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span><div><div class="font-semibold">🧩 Skills e configuracoes reutilizaveis</div><div class="text-sm text-neutral-400">Conhecimento operacional reaplicado</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">pacotes de instrucoes e padroes que reduzem repeticao e aumentam consistencia.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">sem reutilizacao o agente perde padrao entre projetos.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">instruction pack, defaults e configuration.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span><div><div class="font-semibold">🧹 Higiene de contexto</div><div class="text-sm text-neutral-400">Como nao afogar o sistema em ruido</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">pratica de filtrar, resumir e priorizar informacao antes de enviar ao agente.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">contexto sujo piora decisao e encarece execucao.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">relevance, summarization e stale context.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span><div><div class="font-semibold">🧪 Laboratorio de memoria minima</div><div class="text-sm text-neutral-400">Persistir estado suficiente para retomar</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">exercicio para salvar historico minimo e retomar um fluxo.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">mostra como contexto e memoria mudam confiabilidade e experiencia.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">save state, restore e replay.</p></div></div></div></div>
+          </div>
+          <div class="p-6 border-t border-dark-600"><div class="flex justify-start space-x-3"><a href="modulo-1-5.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a><button onclick="openModal('modal-1-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button></div></div>
         </div>
-        <div class="bg-dark-800 rounded-3xl border border-dark-600 p-6">
-          <div class="text-emerald-400 font-semibold mb-1">Modulo 1.6 • ~50 min</div>
-          <h3 class="text-2xl font-bold mb-2">🚀 Primeiro mini projeto agentic</h3>
-          <p class="text-neutral-400">Assistente de pesquisa e sintese com validacao de saida e entrega padronizada.</p>
+
+        <div class="bg-dark-800 rounded-3xl border border-dark-600 overflow-hidden">
+          <div class="p-6 border-b border-dark-600"><div class="text-emerald-400 font-semibold mb-1">Modulo 1.6 • ~50 min</div><h3 class="text-2xl font-bold mb-2">🚀 Primeiro mini projeto agentic</h3><p class="text-neutral-400">Fechamento da trilha com um projeto guiado de pesquisa e sintese orientado a output estruturado.</p></div>
+          <div class="divide-y divide-dark-600">
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span><div><div class="font-semibold">🎯 Definicao do caso</div><div class="text-sm text-neutral-400">Escolher um problema pequeno, mas real</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">escolha de um caso com objetivo claro, entradas disponiveis e saida util.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">caso mal escolhido mistura dificuldade tecnica com problema mal definido.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">scope, input, output e valor.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span><div><div class="font-semibold">🗂️ Especificacao do workflow</div><div class="text-sm text-neutral-400">Transformar o caso em etapas verificaveis</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">desenho das fases com pontos de decisao e saidas intermediarias.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">especificacao boa diminui improviso e torna o projeto testavel.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">spec, phases, gate e deliverable.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span><div><div class="font-semibold">🛠️ Tools e pipeline</div><div class="text-sm text-neutral-400">Escolher o minimo necessario</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">definicao de quais tools entram e em que momento cada uma sera usada.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">projeto bom usa poucas ferramentas bem encaixadas.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">tool chain, dependency e schema.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span><div><div class="font-semibold">✅ Validacao e criterio de qualidade</div><div class="text-sm text-neutral-400">Testar antes de chamar de pronto</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">checagem da saida final e das etapas intermediarias contra criterios definidos.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">treina a disciplina de nao confundir execucao com qualidade.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">acceptance criteria, format check e completeness.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span><div><div class="font-semibold">📦 Entrega estruturada</div><div class="text-sm text-neutral-400">Formato final utilizavel</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">organizacao do output em formato legivel, padronizado e reaproveitavel.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">boa engenharia termina em entrega utilizavel, nao so em execucao correta.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">report, structured output e handoff.</p></div></div></div></div>
+            <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">6</span><div><div class="font-semibold">🎬 Demo e retro de aprendizagem</div><div class="text-sm text-neutral-400">Fechar o projeto com diagnostico</div></div></button><div class="topic-explanation px-6 pb-5"><div class="grid gap-3"><div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4"><strong class="text-emerald-400">O que e:</strong><p class="text-neutral-300 mt-1">apresentacao curta do fluxo, do resultado e das licoes tecnicas.</p></div><div class="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4"><strong class="text-blue-400">Por que aprender:</strong><p class="text-neutral-300 mt-1">retro consolida criterio e prepara a proxima iteracao.</p></div><div class="rounded-2xl border border-primary/40 bg-primary/10 p-4"><strong class="text-primary">Conceitos-chave:</strong><p class="text-neutral-300 mt-1">demo, postmortem, iteration e next step.</p></div></div></div></div>
+          </div>
+          <div class="p-6 border-t border-dark-600"><div class="flex justify-start space-x-3"><a href="modulo-1-6.html" class="px-4 py-2 text-sm bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg transition-colors">Abrir modulo</a><button onclick="openModal('modal-1-6')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button></div></div>
         </div>
       </div>
     </section>
   </main>
 
-  <div id="modal-1-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()">
-    <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
-      <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
-        <div class="flex items-center space-x-3">
-          <span class="text-emerald-400 font-bold">1.1</span>
-          <span class="font-semibold">O que e Agentic AI e como pensar como engenheiro</span>
-        </div>
-        <button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button>
-      </div>
-      <iframe src="modulo-1-1.html" class="flex-1 w-full rounded-b-xl"></iframe>
-    </div>
-  </div>
+  <div id="modal-1-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span class="font-semibold">O que e Agentic AI e como pensar como engenheiro</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-1-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.2</span><span class="font-semibold">Fundamentos tecnicos para workflows</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-1-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.3</span><span class="font-semibold">WAT na pratica</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-1-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.4</span><span class="font-semibold">Tool design e schemas</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-1-5" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.5</span><span class="font-semibold">Contexto, memoria e reutilizacao</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-5.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+  <div id="modal-1-6" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.6</span><span class="font-semibold">Primeiro mini projeto agentic</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-6.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
 
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Engenharia Agentic - 2026</p>
-    </div>
-  </footer>
+  <footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Engenharia Agentic - 2026</p></div></footer>
 
   <script>
     function toggleTopic(button) {
@@ -344,9 +197,7 @@
       document.querySelectorAll('.modal').forEach(modal => modal.classList.add('hidden'));
       document.body.style.overflow = 'auto';
     }
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
-    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
